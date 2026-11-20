@@ -66,8 +66,32 @@ chronology and semantic relation. Do not claim to have personally heard the audi
 PROMPT += BOUNDARY_CHECKS
 VERIFY += BOUNDARY_CHECKS
 
+COMPLETE_CONTEXT_RULES = """
+Use the complete preceding exchanges supplied in context to resolve the pending
+question, referents, topic and communicative purpose. Context blocks are retrieval
+units, not true turn labels. Locate target.absolute_gap on the original timeline.
+First determine what the action immediately before LEFT was doing and whether it
+finished or was abandoned. Then determine whether the FIRST phrase at RIGHT
+completes/explains/repairs that action or independently opens a different action.
+Read the partner's full intervening contribution: brief receipt alone does not
+change a continuing action, whereas a substantive response may close the exchange.
+Do not use a later topic change to classify this earlier target. Complete sentences
+may continue the same action, and a same-speaker new action may be a transition.
+Return the semantic judgment; the configured duration cap is applied separately
+and preserved in the output, so a policy override cannot masquerade as semantics.
+"""
+
 
 def request(payload, prompt, *, endpoint="http://127.0.0.1:18770/v1/chat/completions", model="qwen38-27b"):
+    input_budget = None
+    if payload.get('context_policy'):
+        from context_budget import fit_gap_payload
+        started = time.monotonic()
+        try:
+            payload,input_budget=fit_gap_payload(payload,prompt,endpoint,model)
+        except (OSError,ValueError,KeyError,TypeError) as exc:
+            return dict(status='error',errors=[str(exc)],attempts=0,seconds=time.monotonic()-started,
+                        failure_stage='context_budget')
     body = {
         "model": model,
         "messages": [{"role": "system", "content": prompt},
@@ -102,7 +126,7 @@ def request(payload, prompt, *, endpoint="http://127.0.0.1:18770/v1/chat/complet
                     or output["relation"] not in PROPERTIES["relation"]["enum"]):
                 raise ValueError("Invalid decision fields")
             return dict(status="ok", **output, seconds=round(time.monotonic() - total_started, 3),
-                        attempts=len(attempts)+1)
+                        attempts=len(attempts)+1,input_budget=input_budget)
         except (OSError, ValueError, KeyError, TypeError, IndexError) as exc:
             attempts.append(str(exc))
     return dict(status="error", errors=attempts, attempts=len(attempts),
@@ -146,6 +170,9 @@ def risk(payload, decision):
 
 
 def shorter(payload):
+    if payload.get('context_policy'):
+        # Never silently revert the revised review to a seconds-based crop.
+        return dict(payload)
     low, high = payload["target"]["absolute_gap"]
     result = dict(payload)
     for field in ("context", "other_near_target"):

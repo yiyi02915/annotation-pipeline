@@ -1,0 +1,759 @@
+{
+  "version": "expanded-guarded-v3-20261117",
+  "frozen_at": "2026-11-16T16:49:23.515603+00:00",
+  "source_hashes": {
+    ".gitignore": "c5b3a56f61f9d915d46ad30a02d967ad3d67dbcd457de5134f8126d381ac6762",
+    "audio_judge.py": "c17e33f8fca63002e1175f547797a86c64fa1347d955d40f8c408e6b4709b350",
+    "context_budget.py": "09c78b4f55ee90a48849885674137987832533b805724d4ba3327dec25c1f435",
+    "CONTEXT_POLICY.md": "e532cf8a39941f2492abe37b3d100a3ab0d2fdfc14ff0a627a3bc8f1ed06e0d2",
+    "context_review_bi.py": "dcb76a3388c9e3447465393ea84b135f5ea22054fa16ea8698d65a6f6af6e016",
+    "dialogue_context.py": "8ad90ea6c91feb04c1b79d91393d88e21970b710c22239665e54e4c9ea8b66d7",
+    "event_extractor.py": "479496e41e9345b07c4753c3846240cb9a40ccddcb830d9fcad1cef9c3d87fa9",
+    "expanded_review_bi.py": "56749fc5e28b8238d0c834130171d7a9d60b3ffec1a9b86facf9d7a41cdf95a8",
+    "gap_judge.py": "de4d2972d7e056bfdfbe6b72aac521b3936fb49cefc5bc70e0d804b13ad6e9ac",
+    "guarded_expanded_bi.py": "0314c93094d1c989ed7cf5bdca5b5bbf6925ec13d364bd25eb7250493a35c542",
+    "input_seamless.py": "fcb9c2a7eb8e136a266d730e4c4234f93706a354cc65250a43d582dc7f36503a",
+    "input_v3.py": "0e5aca6090cf8c69ce11740f426928de674734b2fd8592d8f46d5e28a4d903a8",
+    "interaction_complete_context.txt": "a55a2c5fc3ab0908c6ee2a7955a43c839ef7f8929c565af0f4e0c720cab86c04",
+    "interaction_context_review.txt": "6b56d4362837c6d4e0ad4b83b70867a81c2d25d47b4d12348abeded93a394e69",
+    "interaction_entry_refinement.txt": "1ae28aa5c1e150a48f3aaaa4fc256f736afcf5ae6484ff2ed210cb87f61fd78c",
+    "interaction_expanded_review.txt": "70f8101dfdce24453d19a9b649d2885b869ca6057e0df25ef0b0f6869a41dee0",
+    "interaction_floor_checks.txt": "c84b286bd87500e0b112b779c709346bd2a1c64f9ddb6f5ff9f0a99e1bf6c317",
+    "interaction_multi_event_system.txt": "fa71addce15d5f97799b8c45890ce0376baa11315a8eff938d9b4599caee4aea",
+    "interaction_response_review.txt": "877c0cfe89f69cfcc6b0ca7ca5a62fd0a0b8fc99c26d824f2b895d817f3ae5a2",
+    "interaction_stateful.txt": "e67cbc092c72b314ea4c75593faa33c853e334e5917c895600aba589acbea954",
+    "pipeline.py": "442bd604da2448b2fb18a2af20e7b27e2ef3b959ca5722cb52bc2022f5ec2b74",
+    "README.md": "cc67b2249957ecc54b6ea8913ac69028c1ad37982e77ba1c04eef3b491f6e41d",
+    "RELEASE_NOTES.md": "41b8fc87f8f1f8b8305671857790398a50c572f83c12f183f9033017e7824513",
+    "requirements.txt": "b35ad85ce16dd5c2f1b63086b094c5e83c160ca4432f4c5ebc71cbb1c33ec946",
+    "risk_annotations.py": "fa80363b5e57ee0e2a0ab847b17094a3cbac564c35eb053e25b4f713f216fbb1",
+    "run_multi.py": "7742d3c4e996dca68108ff211ea1645016c93e9f7c44bab6665724ffb2e96dcd",
+    "stateful_bi.py": "84e9c26688312b1b674177ae258e86f7d8b7ca839f36dd584ce1f660c653d57c",
+    "test_context_budget.py": "88d271b584079826300b9130629c4f1b641c9399eb4a364c03e84621d450cbce",
+    "test_context_review_bi.py": "954eb909776c342d70bbe49ddb08a6f76aae6e54a6d0be2b1632979ed43ec953",
+    "test_dialogue_context.py": "20200e052e45513ceebb738735cd8ee1f92164c533bdc7bc66429cdb3d24605f",
+    "test_expanded_review_bi.py": "77e22e4d74b48215925b1dd18966e41a0c7b4ca7f0f3e0a4b7debee7e7debfa1",
+    "test_fa_adapter.py": "8609addd5ef097d543835184d716bd087d935d58ce20add78752be867352cb69",
+    "test_guarded_expanded_bi.py": "9605dc0a4e40eb6e5cdaf39eff73067e1ca89d248840c5f96d40dbeb23a42ec3",
+    "test_regressions.py": "a5808fd2744be57f2f65a47e2b1c7861357d97fae63009ac7b9c2021a9d321cf",
+    "test_risk_annotations.py": "cafa590c170c1598e35caa416c94014f9ff9b25b1af3cec1ca0f29d096ea0a1f",
+    "test_stateful_bi.py": "32daa9d0c133f7acf37779cca2e2a4fdf9b1d2691ab25d50739deec5b58a0e29"
+  },
+  "classifier_files_unchanged_since_freeze": true,
+  "publishing_only_changed_files": [
+    "pipeline.py",
+    "README.md",
+    "risk_annotations.py"
+  ],
+  "reference_method": "Codex semantic references locked before new predictions; not independent human auditory ground truth",
+  "blind_reference_lock": {
+    "sha256": "a711ebc80c6d345b7dc6f37b9f2c5f9ab30e18fe215a069086a9b1d1883608b1",
+    "locked_at": "2026-11-16T17:08:01.177885+00:00",
+    "cases": 30,
+    "positions": 137
+  },
+  "blind_inference_lock": {
+    "reference_sha256": "a711ebc80c6d345b7dc6f37b9f2c5f9ab30e18fe215a069086a9b1d1883608b1",
+    "input_sha256": "4996630234c45fcea8a47a77548704f543341d226f0f7b151e34403a0e78f393",
+    "source_hashes": {
+      ".gitignore": "c5b3a56f61f9d915d46ad30a02d967ad3d67dbcd457de5134f8126d381ac6762",
+      "audio_judge.py": "c17e33f8fca63002e1175f547797a86c64fa1347d955d40f8c408e6b4709b350",
+      "context_budget.py": "09c78b4f55ee90a48849885674137987832533b805724d4ba3327dec25c1f435",
+      "CONTEXT_POLICY.md": "e532cf8a39941f2492abe37b3d100a3ab0d2fdfc14ff0a627a3bc8f1ed06e0d2",
+      "context_review_bi.py": "dcb76a3388c9e3447465393ea84b135f5ea22054fa16ea8698d65a6f6af6e016",
+      "dialogue_context.py": "8ad90ea6c91feb04c1b79d91393d88e21970b710c22239665e54e4c9ea8b66d7",
+      "event_extractor.py": "479496e41e9345b07c4753c3846240cb9a40ccddcb830d9fcad1cef9c3d87fa9",
+      "expanded_review_bi.py": "56749fc5e28b8238d0c834130171d7a9d60b3ffec1a9b86facf9d7a41cdf95a8",
+      "gap_judge.py": "de4d2972d7e056bfdfbe6b72aac521b3936fb49cefc5bc70e0d804b13ad6e9ac",
+      "guarded_expanded_bi.py": "0314c93094d1c989ed7cf5bdca5b5bbf6925ec13d364bd25eb7250493a35c542",
+      "input_seamless.py": "fcb9c2a7eb8e136a266d730e4c4234f93706a354cc65250a43d582dc7f36503a",
+      "input_v3.py": "0e5aca6090cf8c69ce11740f426928de674734b2fd8592d8f46d5e28a4d903a8",
+      "interaction_complete_context.txt": "a55a2c5fc3ab0908c6ee2a7955a43c839ef7f8929c565af0f4e0c720cab86c04",
+      "interaction_context_review.txt": "6b56d4362837c6d4e0ad4b83b70867a81c2d25d47b4d12348abeded93a394e69",
+      "interaction_entry_refinement.txt": "1ae28aa5c1e150a48f3aaaa4fc256f736afcf5ae6484ff2ed210cb87f61fd78c",
+      "interaction_expanded_review.txt": "70f8101dfdce24453d19a9b649d2885b869ca6057e0df25ef0b0f6869a41dee0",
+      "interaction_floor_checks.txt": "c84b286bd87500e0b112b779c709346bd2a1c64f9ddb6f5ff9f0a99e1bf6c317",
+      "interaction_multi_event_system.txt": "fa71addce15d5f97799b8c45890ce0376baa11315a8eff938d9b4599caee4aea",
+      "interaction_response_review.txt": "877c0cfe89f69cfcc6b0ca7ca5a62fd0a0b8fc99c26d824f2b895d817f3ae5a2",
+      "interaction_stateful.txt": "e67cbc092c72b314ea4c75593faa33c853e334e5917c895600aba589acbea954",
+      "pipeline.py": "442bd604da2448b2fb18a2af20e7b27e2ef3b959ca5722cb52bc2022f5ec2b74",
+      "README.md": "cc67b2249957ecc54b6ea8913ac69028c1ad37982e77ba1c04eef3b491f6e41d",
+      "RELEASE_NOTES.md": "41b8fc87f8f1f8b8305671857790398a50c572f83c12f183f9033017e7824513",
+      "requirements.txt": "b35ad85ce16dd5c2f1b63086b094c5e83c160ca4432f4c5ebc71cbb1c33ec946",
+      "risk_annotations.py": "fa80363b5e57ee0e2a0ab847b17094a3cbac564c35eb053e25b4f713f216fbb1",
+      "run_multi.py": "7742d3c4e996dca68108ff211ea1645016c93e9f7c44bab6665724ffb2e96dcd",
+      "stateful_bi.py": "84e9c26688312b1b674177ae258e86f7d8b7ca839f36dd584ce1f660c653d57c",
+      "test_context_budget.py": "88d271b584079826300b9130629c4f1b641c9399eb4a364c03e84621d450cbce",
+      "test_context_review_bi.py": "954eb909776c342d70bbe49ddb08a6f76aae6e54a6d0be2b1632979ed43ec953",
+      "test_dialogue_context.py": "20200e052e45513ceebb738735cd8ee1f92164c533bdc7bc66429cdb3d24605f",
+      "test_expanded_review_bi.py": "77e22e4d74b48215925b1dd18966e41a0c7b4ca7f0f3e0a4b7debee7e7debfa1",
+      "test_fa_adapter.py": "8609addd5ef097d543835184d716bd087d935d58ce20add78752be867352cb69",
+      "test_guarded_expanded_bi.py": "9605dc0a4e40eb6e5cdaf39eff73067e1ca89d248840c5f96d40dbeb23a42ec3",
+      "test_regressions.py": "a5808fd2744be57f2f65a47e2b1c7861357d97fae63009ac7b9c2021a9d321cf",
+      "test_risk_annotations.py": "cafa590c170c1598e35caa416c94014f9ff9b25b1af3cec1ca0f29d096ea0a1f",
+      "test_stateful_bi.py": "32daa9d0c133f7acf37779cca2e2a4fdf9b1d2691ab25d50739deec5b58a0e29"
+    },
+    "prediction_start": "2026-11-16T17:08:11.520043+00:00",
+    "workers": 2,
+    "temperature": 0,
+    "model": "qwen38-27b",
+    "qwen_context": 32768,
+    "tensor_parallel": 1,
+    "jev": "DuplexJev-32B-Para",
+    "audio_mode": "fresh mixed dual tracks, four option permutations",
+    "label_source": "Codex before predictions; not independent human ground truth",
+    "labels_in_model_input": false
+  },
+  "development": {
+    "metrics": {
+      "baseline": {
+        "all": {
+          "n": 135,
+          "valid": 135,
+          "correct": 110,
+          "by_label": {
+            "INTERRUPT": {
+              "n": 11,
+              "correct": 7,
+              "false_positive": 13
+            },
+            "BACKCHANNEL": {
+              "n": 27,
+              "correct": 20,
+              "false_positive": 3
+            },
+            "NEITHER": {
+              "n": 97,
+              "correct": 83,
+              "false_positive": 9
+            }
+          }
+        },
+        "higher_reference_quality": {
+          "n": 116,
+          "valid": 116,
+          "correct": 96,
+          "by_label": {
+            "INTERRUPT": {
+              "n": 11,
+              "correct": 7,
+              "false_positive": 9
+            },
+            "BACKCHANNEL": {
+              "n": 25,
+              "correct": 19,
+              "false_positive": 3
+            },
+            "NEITHER": {
+              "n": 80,
+              "correct": 70,
+              "false_positive": 8
+            }
+          }
+        },
+        "by_stratum": {
+          "ongoing_entry": {
+            "n": 51,
+            "valid": 51,
+            "correct": 38,
+            "by_label": {
+              "INTERRUPT": {
+                "n": 4,
+                "correct": 3,
+                "false_positive": 8
+              },
+              "BACKCHANNEL": {
+                "n": 9,
+                "correct": 4,
+                "false_positive": 0
+              },
+              "NEITHER": {
+                "n": 38,
+                "correct": 31,
+                "false_positive": 5
+              }
+            }
+          },
+          "question_end": {
+            "n": 40,
+            "valid": 40,
+            "correct": 32,
+            "by_label": {
+              "INTERRUPT": {
+                "n": 5,
+                "correct": 4,
+                "false_positive": 5
+              },
+              "BACKCHANNEL": {
+                "n": 4,
+                "correct": 3,
+                "false_positive": 1
+              },
+              "NEITHER": {
+                "n": 31,
+                "correct": 25,
+                "false_positive": 2
+              }
+            }
+          },
+          "repeated_receipts": {
+            "n": 44,
+            "valid": 44,
+            "correct": 40,
+            "by_label": {
+              "INTERRUPT": {
+                "n": 2,
+                "correct": 0,
+                "false_positive": 0
+              },
+              "BACKCHANNEL": {
+                "n": 14,
+                "correct": 13,
+                "false_positive": 2
+              },
+              "NEITHER": {
+                "n": 28,
+                "correct": 27,
+                "false_positive": 2
+              }
+            }
+          }
+        },
+        "normal_answer": {
+          "n": 16,
+          "valid": 16,
+          "correct": 12,
+          "by_label": {
+            "INTERRUPT": {
+              "n": 0,
+              "correct": 0,
+              "false_positive": 3
+            },
+            "BACKCHANNEL": {
+              "n": 0,
+              "correct": 0,
+              "false_positive": 1
+            },
+            "NEITHER": {
+              "n": 16,
+              "correct": 12,
+              "false_positive": 0
+            }
+          }
+        },
+        "structure": {
+          "same_feedback": {
+            "n": 4,
+            "correct": 4
+          },
+          "same_interruption": {
+            "n": 9,
+            "correct": 1
+          },
+          "separate_feedback": {
+            "n": 2,
+            "correct": 2
+          }
+        },
+        "failed_windows": 0
+      },
+      "optimized": {
+        "all": {
+          "n": 135,
+          "valid": 135,
+          "correct": 117,
+          "by_label": {
+            "INTERRUPT": {
+              "n": 11,
+              "correct": 8,
+              "false_positive": 8
+            },
+            "BACKCHANNEL": {
+              "n": 27,
+              "correct": 20,
+              "false_positive": 2
+            },
+            "NEITHER": {
+              "n": 97,
+              "correct": 89,
+              "false_positive": 8
+            }
+          }
+        },
+        "higher_reference_quality": {
+          "n": 116,
+          "valid": 116,
+          "correct": 103,
+          "by_label": {
+            "INTERRUPT": {
+              "n": 11,
+              "correct": 8,
+              "false_positive": 4
+            },
+            "BACKCHANNEL": {
+              "n": 25,
+              "correct": 19,
+              "false_positive": 2
+            },
+            "NEITHER": {
+              "n": 80,
+              "correct": 76,
+              "false_positive": 7
+            }
+          }
+        },
+        "by_stratum": {
+          "ongoing_entry": {
+            "n": 51,
+            "valid": 51,
+            "correct": 39,
+            "by_label": {
+              "INTERRUPT": {
+                "n": 4,
+                "correct": 3,
+                "false_positive": 7
+              },
+              "BACKCHANNEL": {
+                "n": 9,
+                "correct": 4,
+                "false_positive": 0
+              },
+              "NEITHER": {
+                "n": 38,
+                "correct": 32,
+                "false_positive": 5
+              }
+            }
+          },
+          "question_end": {
+            "n": 40,
+            "valid": 40,
+            "correct": 37,
+            "by_label": {
+              "INTERRUPT": {
+                "n": 5,
+                "correct": 5,
+                "false_positive": 1
+              },
+              "BACKCHANNEL": {
+                "n": 4,
+                "correct": 3,
+                "false_positive": 1
+              },
+              "NEITHER": {
+                "n": 31,
+                "correct": 29,
+                "false_positive": 1
+              }
+            }
+          },
+          "repeated_receipts": {
+            "n": 44,
+            "valid": 44,
+            "correct": 41,
+            "by_label": {
+              "INTERRUPT": {
+                "n": 2,
+                "correct": 0,
+                "false_positive": 0
+              },
+              "BACKCHANNEL": {
+                "n": 14,
+                "correct": 13,
+                "false_positive": 1
+              },
+              "NEITHER": {
+                "n": 28,
+                "correct": 28,
+                "false_positive": 2
+              }
+            }
+          }
+        },
+        "normal_answer": {
+          "n": 16,
+          "valid": 16,
+          "correct": 16,
+          "by_label": {
+            "INTERRUPT": {
+              "n": 0,
+              "correct": 0,
+              "false_positive": 0
+            },
+            "BACKCHANNEL": {
+              "n": 0,
+              "correct": 0,
+              "false_positive": 0
+            },
+            "NEITHER": {
+              "n": 16,
+              "correct": 16,
+              "false_positive": 0
+            }
+          }
+        },
+        "structure": {
+          "same_feedback": {
+            "n": 4,
+            "correct": 4
+          },
+          "same_interruption": {
+            "n": 9,
+            "correct": 6
+          },
+          "separate_feedback": {
+            "n": 2,
+            "correct": 2
+          }
+        },
+        "failed_windows": 0
+      }
+    },
+    "fixed": 7,
+    "regressed": 0,
+    "used_for_tuning": true
+  },
+  "blind": {
+    "metrics": {
+      "baseline": {
+        "all": {
+          "n": 137,
+          "valid": 137,
+          "correct": 112,
+          "by_label": {
+            "INTERRUPT": {
+              "n": 5,
+              "correct": 5,
+              "false_positive": 12
+            },
+            "BACKCHANNEL": {
+              "n": 22,
+              "correct": 16,
+              "false_positive": 7
+            },
+            "NEITHER": {
+              "n": 110,
+              "correct": 91,
+              "false_positive": 6
+            }
+          }
+        },
+        "higher_reference_quality": {
+          "n": 113,
+          "valid": 113,
+          "correct": 92,
+          "by_label": {
+            "INTERRUPT": {
+              "n": 4,
+              "correct": 4,
+              "false_positive": 9
+            },
+            "BACKCHANNEL": {
+              "n": 19,
+              "correct": 14,
+              "false_positive": 7
+            },
+            "NEITHER": {
+              "n": 90,
+              "correct": 74,
+              "false_positive": 5
+            }
+          }
+        },
+        "by_stratum": {
+          "ongoing_entry": {
+            "n": 54,
+            "valid": 54,
+            "correct": 42,
+            "by_label": {
+              "INTERRUPT": {
+                "n": 3,
+                "correct": 3,
+                "false_positive": 4
+              },
+              "BACKCHANNEL": {
+                "n": 7,
+                "correct": 2,
+                "false_positive": 3
+              },
+              "NEITHER": {
+                "n": 44,
+                "correct": 37,
+                "false_positive": 5
+              }
+            }
+          },
+          "question_end": {
+            "n": 39,
+            "valid": 39,
+            "correct": 30,
+            "by_label": {
+              "INTERRUPT": {
+                "n": 2,
+                "correct": 2,
+                "false_positive": 7
+              },
+              "BACKCHANNEL": {
+                "n": 4,
+                "correct": 3,
+                "false_positive": 1
+              },
+              "NEITHER": {
+                "n": 33,
+                "correct": 25,
+                "false_positive": 1
+              }
+            }
+          },
+          "repeated_receipts": {
+            "n": 44,
+            "valid": 44,
+            "correct": 40,
+            "by_label": {
+              "INTERRUPT": {
+                "n": 0,
+                "correct": 0,
+                "false_positive": 1
+              },
+              "BACKCHANNEL": {
+                "n": 11,
+                "correct": 11,
+                "false_positive": 3
+              },
+              "NEITHER": {
+                "n": 33,
+                "correct": 29,
+                "false_positive": 0
+              }
+            }
+          }
+        },
+        "normal_answer": {
+          "n": 35,
+          "valid": 35,
+          "correct": 24,
+          "by_label": {
+            "INTERRUPT": {
+              "n": 0,
+              "correct": 0,
+              "false_positive": 7
+            },
+            "BACKCHANNEL": {
+              "n": 0,
+              "correct": 0,
+              "false_positive": 4
+            },
+            "NEITHER": {
+              "n": 35,
+              "correct": 24,
+              "false_positive": 0
+            }
+          }
+        },
+        "structure": {
+          "same_feedback": {
+            "n": 10,
+            "correct": 6
+          },
+          "same_interruption": {
+            "n": 9,
+            "correct": 3
+          },
+          "separate_feedback": {
+            "n": 4,
+            "correct": 4
+          }
+        },
+        "failed_windows": 0
+      },
+      "optimized": {
+        "all": {
+          "n": 137,
+          "valid": 137,
+          "correct": 118,
+          "by_label": {
+            "INTERRUPT": {
+              "n": 5,
+              "correct": 5,
+              "false_positive": 7
+            },
+            "BACKCHANNEL": {
+              "n": 22,
+              "correct": 16,
+              "false_positive": 6
+            },
+            "NEITHER": {
+              "n": 110,
+              "correct": 97,
+              "false_positive": 6
+            }
+          }
+        },
+        "higher_reference_quality": {
+          "n": 113,
+          "valid": 113,
+          "correct": 97,
+          "by_label": {
+            "INTERRUPT": {
+              "n": 4,
+              "correct": 4,
+              "false_positive": 5
+            },
+            "BACKCHANNEL": {
+              "n": 19,
+              "correct": 14,
+              "false_positive": 6
+            },
+            "NEITHER": {
+              "n": 90,
+              "correct": 79,
+              "false_positive": 5
+            }
+          }
+        },
+        "by_stratum": {
+          "ongoing_entry": {
+            "n": 54,
+            "valid": 54,
+            "correct": 43,
+            "by_label": {
+              "INTERRUPT": {
+                "n": 3,
+                "correct": 3,
+                "false_positive": 3
+              },
+              "BACKCHANNEL": {
+                "n": 7,
+                "correct": 2,
+                "false_positive": 3
+              },
+              "NEITHER": {
+                "n": 44,
+                "correct": 38,
+                "false_positive": 5
+              }
+            }
+          },
+          "question_end": {
+            "n": 39,
+            "valid": 39,
+            "correct": 33,
+            "by_label": {
+              "INTERRUPT": {
+                "n": 2,
+                "correct": 2,
+                "false_positive": 4
+              },
+              "BACKCHANNEL": {
+                "n": 4,
+                "correct": 3,
+                "false_positive": 1
+              },
+              "NEITHER": {
+                "n": 33,
+                "correct": 28,
+                "false_positive": 1
+              }
+            }
+          },
+          "repeated_receipts": {
+            "n": 44,
+            "valid": 44,
+            "correct": 42,
+            "by_label": {
+              "INTERRUPT": {
+                "n": 0,
+                "correct": 0,
+                "false_positive": 0
+              },
+              "BACKCHANNEL": {
+                "n": 11,
+                "correct": 11,
+                "false_positive": 2
+              },
+              "NEITHER": {
+                "n": 33,
+                "correct": 31,
+                "false_positive": 0
+              }
+            }
+          }
+        },
+        "normal_answer": {
+          "n": 35,
+          "valid": 35,
+          "correct": 28,
+          "by_label": {
+            "INTERRUPT": {
+              "n": 0,
+              "correct": 0,
+              "false_positive": 4
+            },
+            "BACKCHANNEL": {
+              "n": 0,
+              "correct": 0,
+              "false_positive": 3
+            },
+            "NEITHER": {
+              "n": 35,
+              "correct": 28,
+              "false_positive": 0
+            }
+          }
+        },
+        "structure": {
+          "same_feedback": {
+            "n": 10,
+            "correct": 6
+          },
+          "same_interruption": {
+            "n": 9,
+            "correct": 4
+          },
+          "separate_feedback": {
+            "n": 4,
+            "correct": 4
+          }
+        },
+        "failed_windows": 0
+      }
+    },
+    "fixed": 7,
+    "regressed": 1,
+    "significance": {
+      "paired_discordant": 8,
+      "fixed": 7,
+      "regressed": 1,
+      "mcnemar_exact_p": 0.0703125,
+      "conversation_cluster_bootstrap_delta_ci95": [
+        0.007246376811594203,
+        0.08208955223880597
+      ],
+      "bootstrap_repetitions": 5000,
+      "note": "Small targeted sample and Codex references limit generalization; cluster resampling accounts for positions within conversations"
+    },
+    "timing": {
+      "audio_seconds": 14.653893634676933,
+      "text_seconds": 892.4699289351702,
+      "wall_seconds": 907.123824570328,
+      "note": "shared fresh audio then concurrent local+previous review+expanded graph+guarded positive audits; model loading excluded; paired experiment not independent production benchmarks"
+    },
+    "review": {
+      "graph_review_windows": 30,
+      "graph_requests_including_retries": 37,
+      "graph_request_errors": 9,
+      "graph_fallback_windows": 0,
+      "positive_audit_candidates": 41,
+      "positive_audit_requests": 41,
+      "positive_audit_core_candidates": 29,
+      "positive_audit_removals": 9,
+      "positive_audit_guard_blocks": 12,
+      "positive_audit_errors": 0,
+      "previous_narrow_review_requests": 4,
+      "total_additional_requests": 78,
+      "note": "All candidates inspected jointly in graph requests. Positive audits are separate requests; graph retries do not multiply candidate coverage."
+    }
+  },
+  "tests_passed": 85,
+  "no_raw_recordings_transcripts_or_credentials_in_public_summary": true
+}

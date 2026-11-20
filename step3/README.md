@@ -2,6 +2,8 @@
 
 本次发布保留原有 Qwen＋音频／规则判断逻辑。版本依据、实测范围和风险标记说明见
 [RELEASE_NOTES.md](RELEASE_NOTES.md)。独立保存的文本 SFT 实验不替换本管线。
+新增的完整上下文与扩大复判是可选模式，入口、判别约束和实测范围见
+[BI_REVIEW.md](BI_REVIEW.md)。不追加参数时沿用原发布版。
 本地展示工具为 [demo/index.html](demo/index.html)，支持导入标注展示包、按版本/任务/风险筛选和原始时间轴。
 
 推理结果另外包含 `quality` 与 `risk_items`；`risk_subsets/*.json` 单独保存疑似错判及潜在漏标。

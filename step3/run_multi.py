@@ -8,6 +8,22 @@ schema={'type':'object','properties':{'decisions':{'type':'array','items':{'type
 def classify(case, audio=None, diarization=None, audio_view='mix', concise=False, recover_invalid_merge=False,
              refined=False, floor_checks=False, echo_recovery=True, resume_truncated=False,
              endpoint='http://127.0.0.1:18770/v1/chat/completions', model='qwen38-27b'):
+ if case.get('context_layout') in ('review','expanded'):
+  from context_review_bi import review
+  local={k:v for k,v in case.items() if k not in ('context_layout','dialogue_context','context_policy','audio_text_scope')}
+  baseline=classify(local,audio=audio,diarization=diarization,audio_view=audio_view,concise=True,
+      recover_invalid_merge=True,refined=True,floor_checks=True,echo_recovery=echo_recovery,
+      resume_truncated=resume_truncated,endpoint=endpoint,model=model)
+  result=review(case,baseline,endpoint=endpoint,model=model)
+  if case.get('context_layout')=='expanded':
+   from expanded_review_bi import review as expanded_review
+   from guarded_expanded_bi import review as guarded_review
+   proposals=expanded_review(case,result,endpoint=endpoint,model=model)
+   result=guarded_review(case,result,proposals,endpoint=endpoint,model=model)
+  return result
+ if case.get('context_layout')=='stateful':
+  from stateful_bi import classify as classify_stateful
+  return classify_stateful(case,audio,endpoint=endpoint,model=model)
  candidates=extract_candidates(case, refined=refined, floor_checks=floor_checks)
  if audio is not None:
   if audio.get('clip_id')!=case['id']:
@@ -36,6 +52,18 @@ def classify(case, audio=None, diarization=None, audio_view='mix', concise=False
   payload['audio_candidate_votes']=[dict(candidate_id=e['candidate_id'],label=e[audio_view]['answer'])
                                     for e in audio['events']]
  rules=RULES
+ if case.get('dialogue_context'):
+  payload['context']=case['dialogue_context']
+  payload['context_policy']=case['context_policy']
+  rules+='\n'+(D/'interaction_complete_context.txt').read_text(encoding='utf8')
+  if case.get('context_layout')=='anchored':
+   audio_votes=payload.get('audio_candidate_votes')
+   full=[{k:v for k,v in b.items() if k not in ('word_timing','word_timing_columns')} for b in case['dialogue_context']]
+   payload=dict(analysis_interval=case['interval'],speakers=list(case['streams']),
+                candidates=payload['candidates'],onset_context=case['context'],context=full,
+                context_policy=case['context_policy'])
+   if audio_votes is not None: payload['audio_candidate_votes']=audio_votes
+   rules+='\nANCHOR FIRST: onset_context and candidates locate the exact intervention. The separate complete context explains its intent and earlier floor state. Read BOTH; do not replace the target with the most prominent nearby sentence. For each candidate, check the immediately preceding action completion, intervention function, and whether this is a new directed onset or continuation. Subsequent same-speaker continuation does not erase a genuine interruption at its earlier onset. Audio votes describe local delivery, not the semantics of the whole surrounding exchange.'
  if refined:
   rules+='\n'+(D/'interaction_entry_refinement.txt').read_text(encoding='utf8')
   for item in payload['candidates']:

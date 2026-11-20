@@ -1,5 +1,11 @@
 # Resumable audio pipeline — Version 3
 
+Optional downstream **Step 3 full-duplex annotation** reads existing word alignment
+and labels interruptions, backchannels and same-speaker gaps. See the
+[Step 3 entry point](step3/README.md), [context/review options](step3/BI_REVIEW.md)
+and [locked-reference experiment results](step3/BI_REVIEW_RESULTS.md).
+It runs separately from `run_v3.sh`; model checkpoints and datasets are supplied locally.
+
 Use `bash run_v3.sh` for V3. See [V3 configuration, execution and fidelity](docs/v3-performance.md) for the new controls and cache-only defaults. The commands below describe the inherited launchers.
 
 See [v2 changes, resource settings and validation](docs/v2-performance.md) before running this version. The dated baseline is recorded in `BASELINE.json`; the original installation remains separate.

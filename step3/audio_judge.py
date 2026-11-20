@@ -24,10 +24,16 @@ class MixedAudioJudge:
             f"{speaker}: " + " ".join(w["text"] for w in words if onset-3 <= w["start"] <= onset+3)
             for speaker, words in case["streams"].items()
         ]
+        if case.get('dialogue_context') and case.get('audio_text_scope')!='local':
+            transcript = [f"[{b['start']:.3f}-{b['end']:.3f}s absolute] {b['speaker']}: {b['text']}"
+                          for b in case['dialogue_context']]
         body = (f"Target: {candidate['initiator']} speaking to {candidate['recipient']}; "
                 f"target starts at {onset-start:.3f}s relative to clip, "
                 f"ends at {min(candidate['end'], end)-start:.3f}s; "
                 f"target words: {candidate['text']}. Nearby transcript:\n" + "\n".join(transcript))
+        if case.get('dialogue_context') and case.get('audio_text_scope')!='local':
+            body += (f"\nAudio clip starts at {start:.3f}s absolute. Transcript timestamps are absolute. "
+                     "Transcript context can extend outside the audio clip; outside portions are not audible.")
         return self.engine.decide_batch({"mix": waveform}, [self.question], context={"mix": body},
                                         lang=lang, mode="packed", max_items=1, n_perm=4,
                                         seed=0)["mix"]["event"]

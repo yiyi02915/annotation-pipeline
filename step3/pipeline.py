@@ -18,6 +18,8 @@ from input_v3 import load_conversation
 from input_seamless import load_published
 from run_multi import classify
 from risk_annotations import tag_pipeline_result
+from dialogue_context import DialogueContext, apply_long_gap_policy
+from gap_judge import COMPLETE_CONTEXT_RULES
 
 
 def context(streams):
@@ -128,8 +130,14 @@ def gap_candidates(conversation, timeline, core=None, interval=None):
 
 def gap_first(payload, call):
     first = call(payload, PROMPT)
+    flags = risk(payload, dict(first,label=first.get('semantic_label',first.get('label'))))
+    if first.get('duration_semantics_conflict'):
+        flags['duration_semantics_conflict'] = 4
+    if first.get('long_gap_semantic_pause'):
+        flags['long_gap_semantic_pause'] = 2
     return dict(id=payload["id"], speaker=payload["focus"], target=payload["target"], first=first,
-                label=first.get("label"), risk=risk(payload, first), reviewed=False)
+                label=first.get("label"), risk=flags, reviewed=False,
+                context_policy=payload.get('context_policy'))
 
 
 def gap_review(row, payload, call):
@@ -151,18 +159,26 @@ def annotate(row, streams, tracks, duration, judge, args, pool):
     start = clock()
     conversation = row["conversation_id"]
     timeline = WordTimeline(streams)
+    complete = DialogueContext(timeline.streams) if getattr(args,'complete_context',False) else None
     core, analysis = row.get("core"), row.get("interval")
     gaps = list(gap_candidates(conversation, timeline, core, analysis))
+    if complete:
+        gaps = [complete.gap(g) for g in gaps]
     calls = dict(endpoint=args.qwen_endpoint, model=args.qwen_model)
 
     def call(payload, prompt):
-        return request(payload, prompt, **calls)
+        result = request(payload, prompt+(COMPLETE_CONTEXT_RULES if complete else ''), **calls)
+        return apply_long_gap_policy(result, payload, getattr(args,'long_gap_limit',0))
 
     events, windows_out, failures = [], [], []
     overlap_candidates = 0
     audio_requests = 0
     with TemporaryDirectory(dir=args.output.resolve(), prefix="mix-") as temp:
         for case, candidates in windows(conversation, timeline, duration, core=core, analysis=analysis):
+            if complete:
+                case = complete.bi(case)
+                if getattr(args,'context_layout','full') in ('anchored','stateful','review','expanded'):
+                    case.update(context_layout=args.context_layout,audio_text_scope='local')
             votes = dict(clip_id=case["id"], events=[])
             lo, hi = case["target"]
             overlap_candidates += sum(lo <= c["start"] < hi for c in candidates)
@@ -181,6 +197,13 @@ def annotate(row, streams, tracks, duration, judge, args, pool):
                 attempts = [{k: v for k, v in attempt.items() if k != "response"}
                             for attempt in result["attempts"]]
                 windows_out.append(dict(id=case["id"], interval=case["interval"], target=case["target"],
+                                        context_policy=case.get('context_policy'),
+                                        context_reviews=result.get('context_reviews',[]),
+                                        previous_context_reviews=result.get('previous_context_reviews',[]),
+                                        response_audits=result.get('response_audits',[]),
+                                        expanded_review_attempts=result.get('expanded_review_attempts',[]),
+                                        graph_proposal_error=result.get('graph_proposal_error'),
+                                        graph_changes=result.get('graph_changes',[]),
                                         candidate_intervals={c['candidate_id']:[c['start'],c['end']] for c in candidates},
                                         status=result["status"], audio_votes=votes["events"], attempts=attempts,
                                         decisions=result.get("judgment", {}).get("decisions", [])))
@@ -267,9 +290,16 @@ def main():
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--review-fraction", type=float, default=.2)
     parser.add_argument("--prepare-only", action="store_true")
+    parser.add_argument("--complete-context", action="store_true", help="Complete preceding/exchanged text blocks instead of seconds crops")
+    parser.add_argument("--context-layout", choices=('full','anchored','stateful','review','expanded'), default='full', help="Anchored/stateful/review/expanded keep JEV local and supply complete dialogue separately to Qwen")
+    parser.add_argument("--long-gap-limit", type=float, default=0, help="Engineering cap in seconds; 0 disables. Revised policy uses 3.")
     args = parser.parse_args()
+    if args.context_layout in ('stateful','review','expanded') and not args.complete_context:
+        parser.error('Selected BI review requires --complete-context')
     if args.workers < 1 or not 0 <= args.review_fraction <= 1:
         parser.error("Invalid worker count or review fraction")
+    if not math.isfinite(args.long_gap_limit) or args.long_gap_limit < 0:
+        parser.error("Invalid long gap limit")
     if not args.prepare_only and not args.jev_checkpoint:
         parser.error("Provide --jev-checkpoint for model inference")
     pairs = [json.loads(line) for line in args.pairs.read_text(encoding="utf-8-sig").splitlines() if line.strip()]

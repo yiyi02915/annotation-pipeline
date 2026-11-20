@@ -208,6 +208,25 @@ class RegressionTests(unittest.TestCase):
         self.assertEqual(len(result['attempts']),3)
         self.assertTrue(all(a['request_sent'] and a['seconds']>=0 and 'error' in a for a in result['attempts']))
 
+    def test_anchored_layout_keeps_audio_votes_and_full_dialogue(self):
+        case=dict(id='case',number='case',original_label=None,target=[0,4],interval=[0,4],conversation_id='c',
+                  streams={'A':[word('a',0,3)],'B':[word('b',1,2)]},context=[],context_layout='anchored',
+                  context_policy={'version':'test'},dialogue_context=[dict(speaker='A',start=0,end=3,text='whole context.',word_timing=[['whole',0,1]])])
+        candidates=extract_candidates(case)
+        votes=dict(clip_id='case',events=[dict(candidate_id=c['candidate_id'],mix=dict(answer='INTERRUPT')) for c in candidates if c['other_active_run_at_onset']])
+        captured=[]
+        def respond(req,**kw):
+            captured.append(json.loads(json.loads(req.data)['messages'][1]['content']))
+            decisions=[dict(candidate_id=c['candidate_id'],action='KEEP',label='INTERRUPT',merge_into='',reason='test') for c in candidates]
+            return io.StringIO(json.dumps(dict(choices=[dict(finish_reason='stop',message=dict(content=json.dumps(dict(decisions=decisions))))])))
+        with patch('urllib.request.urlopen',side_effect=respond):
+            result=run_multi.classify(case,audio=votes)
+        self.assertEqual(result['status'],'ok')
+        self.assertEqual(len(captured[0]['audio_candidate_votes']),1)
+        self.assertEqual(captured[0]['context'][0]['text'],'whole context.')
+        self.assertNotIn('word_timing',captured[0]['context'][0])
+        self.assertIn('onset_context',captured[0])
+
     def test_corrupt_published_record_is_isolated(self):
         with TemporaryDirectory() as temp:
             root = Path(temp)

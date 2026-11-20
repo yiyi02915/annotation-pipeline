@@ -37,10 +37,29 @@ def annotate(task, initial_label, final_label, text_votes, audio_label,
 def tag_pipeline_result(result):
     """Attach quality metadata without changing labels or dropping flagged events."""
     risks=[]
+    reviews={}
+    review_scope={}
+    timing_conflicts={}
+    for w in result.get('windows',[]):
+        for cid,interval in w.get('candidate_intervals',{}).items():
+            core=w.get('target')
+            if core is None or core[0]<=interval[0]<core[1]:
+                review_scope[cid]=interval
+        for audit in w.get('response_audits',[]):
+            if audit.get('removal_blocked_reason'):
+                timing_conflicts[audit['candidate_id']]=audit['removal_blocked_reason']
+        for r in w.get('previous_context_reviews',[])+w.get('context_reviews',[]):
+            old=reviews.get(r['candidate_id'],{})
+            reviews[r['candidate_id']]=dict(r,changed=bool(old.get('changed') or r.get('changed')),
+                status='error_retained_original' if 'error_retained_original' in (old.get('status'),r.get('status')) else r.get('status'))
     audio={v['candidate_id']:v.get('mix',{}) for w in result.get('windows',[]) for v in w.get('audio_votes',[])}
     for event in result.get('events',[]):
         flags=list(event.get('alignment_flags',[]))
         for cid in event.get('candidate_ids',[]):
+            review=reviews.get(cid,{})
+            if review.get('changed'):flags.append('label_changed_on_context_review')
+            if review.get('status')=='error_retained_original':flags.append('context_review_failure')
+            if cid in timing_conflicts:flags.append('semantic_review_timing_conflict')
             vote=audio.get(cid,{})
             if not vote.get('answer'): flags.append('audio_judge_missing')
             elif vote['answer']!=event['label']: flags.append('text_audio_disagreement')
@@ -76,5 +95,17 @@ def tag_pipeline_result(result):
                 if interval is None: reasons.append('candidate_scope_not_recorded')
                 risks.append(dict(kind='rejected_candidate',id=cid,label=None,interval=interval,risk_flag=True,risk_reasons=reasons,audio_proposal=audio[cid]['answer'],confidence_calibrated=False))
     result['risk_items']=risks
-    result['risk_summary']=dict(flagged_items=len(risks),flagged_annotations=sum(r['kind']!='rejected_candidate' for r in risks),possible_omissions=sum(r['kind']=='rejected_candidate' for r in risks),rule_version='pipeline_v1_20261116',not_calibrated=True)
+    # Retain audit records for removed events and failed review, too.
+    for cid,r in reviews.items():
+        if cid not in review_scope:continue
+        reasons=[]
+        if r.get('changed'):reasons.append('label_changed_on_context_review')
+        if r.get('status')=='error_retained_original':reasons.append('context_review_failure')
+        if cid in timing_conflicts:reasons.append('semantic_review_timing_conflict')
+        if not reasons:continue
+        risks.append(dict(kind='context_review',id=cid,label=r.get('after',{}).get('label') if r.get('after',{}).get('action')!='DROP' else 'NEITHER',
+                          interval=review_scope[cid],risk_flag=True,risk_reasons=reasons,confidence_calibrated=False))
+    result['risk_summary']=dict(flagged_items=len(risks),flagged_annotations=sum(r['kind'] in ('gap','overlap') for r in risks),
+        review_audit_items=sum(r['kind']=='context_review' for r in risks),
+        possible_omissions=sum(r['kind']=='rejected_candidate' for r in risks),rule_version='pipeline_v2_20261117',not_calibrated=True)
     return result
