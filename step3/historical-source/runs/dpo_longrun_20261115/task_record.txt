@@ -1,0 +1,36 @@
+DPO 长程训练任务记录
+
+后台任务：dpo_longrun_20261115
+服务器目录：/data/L202500493/duplex_postprocess/runs/dpo_longrun_20261115
+运行环境：/data/L202500493/duplex_postprocess/runtime/jev/bin/python
+GPU：2、3；其他服务继续保留。
+范围：6 组实验，每组最多 8 轮；总运行上限 4 小时。连续 3 轮没有提升的分支提前结束。
+数据：沿用隔离后的 164 条训练样本，237 个不同偏好对；没有新增独立参考样本。验证、测试和困难回归对话与训练分离。
+
+每组实验：
+r01_seed_balanced：原始种子偏好、类别等总权重、SFT 起点。
+r02_teacher_floor：引入独立教师复核，分歧保留至少 0.5 原始权重，防止困难正例被过度削弱。
+r03_teacher_anchor：增加正确答案监督约束。
+r04_seed_regularized：更强参考约束，使用原始种子偏好。
+r05_continue_dpo：以旧 DPO 为起点，保守更新并结合教师复核。
+r06_continue_seed：以旧 DPO 为起点，使用种子偏好与监督约束。
+
+检查点：每 20 次参数更新、每轮结束及停止时保存。
+内容：LoRA 模型、优化器、随机数状态、当前训练步、下一个数据位置、配置/数据指纹、逐类验证结果、最佳检查点。
+路径：jobs/<任务名>/checkpoints/step_<步数>/
+目录内 adapter/ 为模型；state.pt 为断点状态；metadata.json 为验证和检查点信息。
+每组全部检查点索引：jobs/<任务名>/checkpoints.jsonl
+总进度：progress.json；后台日志：supervisor.log；每组日志：jobs/<任务名>/train.log
+
+可靠性：后台进程脱离 SSH 会话，标准输入为 /dev/null，日志写服务器文件；关闭 Codex 不会发出停止命令。
+异常退出由监督进程最多重试两次，按 latest.json 恢复完整状态。断点续训实测见 resume_test.json。
+服务器本身关机/实例释放会中断计算；已保存检查点可用于恢复。这里不承诺跨服务器关机自动开机。
+
+选择：只按验证集选检查点，逐类召回不得低于 SFT 基线；与旧 DPO 比较时保留验证更好的版本。全部分支结束后才对胜出版本进行最终测试/回归，不用测试答案指导训练。
+结束输出：selection.json、final_metrics.json、final_report.txt、final_status.json。
+若没有超过旧 DPO，会明确记录保留旧版，不把训练完成等同于准确率提高。
+
+本地 check_progress.ps1 可重新读取服务器最新状态；本地快照不会在 Codex 关闭后自动同步。
+需要停止时由 Codex 在服务器任务目录创建 STOP 文件；任务会保存检查点后退出。
+服务器仍运行但任务意外退出时，使用 durable_training.py launch 恢复队列；如果 STOP 文件存在，应先明确恢复意图再移除。
+没有上传 GitHub，也不会由此队列自动上传代码或权重。

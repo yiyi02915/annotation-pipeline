@@ -1,0 +1,6 @@
+DPO 长程任务完成
+选择：previous_dpo
+validation: 36/48, 类别平均召回 80.43%
+test: 25/27, 类别平均召回 87.14%
+regression: 50/76, 类别平均召回 67.93%
+全部检查点见 jobs/*/checkpoints.jsonl。逐条结果见 final_metrics.json。未上传 GitHub。

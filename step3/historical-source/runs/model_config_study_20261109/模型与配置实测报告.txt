@@ -1,0 +1,500 @@
+开源模型与配置增强实测报告
+日期：2026-11-09
+
+本轮建议：音频侧优先采用DuplexJev-32B-Para + n_perm=4，保留Qwen原非思考配置做文字/上下文交叉判断；Smart Turn仅提供停顿的结束信号。不要全量开启Qwen思考模式。
+在固定主审查中，42条可判定事件：Qwen原配置35条符合、思考配置37条符合、JEV4B原枚举选项+n_perm4为23条、JEV32B同配置37条。它们不是金标准准确率。较明确子集应另看原始统计。
+单卡232条：Qwen原配置40.57秒，思考配置1468.09秒，32B枚举选项+n_perm4为58.29秒。JEV与Qwen的后端和批量不同，这些是当前部署配置耗时，不是模型最大性能排名。
+固定语义选项顺序后，4B纯措辞翻转：重叠56→47/116，停顿30→24/116（n_perm1→4）；32B为重叠43→38/116、停顿11→9/116。32B停顿更稳，重叠仍有明显敏感性。
+主结果包含小样本不确定性，不能据此宣布真实准确率达到某百分比；没有发现可完全取消交叉检查的单模型。
+
+实验范围与证据等级
+- Seamless 原3000条：重叠1500、停顿1500。Smart Turn检查全部1500条停顿。
+- 配置/模型对照固定232条：两任务各116条，其中32条旧审查样本及200条新随机诊断样本。
+- 新随机样本中另外20条先隐藏模型答案进行文字/时间盲审；旧样本32条审查结果沿用。审查者为本对话助手，没有听音频。
+- 52条审查样本中42条有倾向判断，10条文字证据不足。下述审查符合数不是金标准准确率；旧审查为一致/分歧分层抽样，不能推广为总体准确率。
+- Qwen与审查者同以文字为主，存在共享偏差；中把握结论可能被声学证据修正。
+- 各候选在推理时只读取输入事件，未读取任何审查标签。
+
+候选调研（官方基准不是本任务准确率）
+1. DuplexJev-32B-Para v1.5：专门做语音决策，官方报告Smart Turn测试94.4%，但这不等于Seamless打断或犹豫准确率；CC-BY-NC-4.0。
+   https://huggingface.co/adventists-ai/DuplexJev-32B-Para
+2. Smart Turn v3.2：8M参数、独立音频结束检测，BSD-2-Clause。适合为停顿提供声音证据，不能直接覆盖完整离线事件标签。
+   https://github.com/pipecat-ai/smart-turn
+3. Qwen3-Omni-30B-A3B：支持音频和文字推理，Apache-2.0；本轮只调研，没有部署，不能宣称其准确率高于已测模型。
+   https://huggingface.co/Qwen/Qwen3-Omni-30B-A3B-Instruct
+
+可通过配置改进什么
+- JEV n_perm=4：平均4次按seed生成的选项顺序，减少位置偏差；不是4个独立模型，也不保证4种顺序完全不同。
+- JEV audio_full_length=true：已在当前权重中开启，并使用duplexjev>=0.7，本轮没有重复声称这项带来提升；不要随意篡改旧权重的结构参数。
+- Qwen enable_thinking=true、reasoning_effort=medium、max_tokens=3072：本轮固定temperature=0进行受控对比；这不是官方推荐的完整随机采样配方。
+- temperature/top_p/top_k不能原样套到JEV的单次前向选项评分上。提高或降低分数不等于校准正确概率。
+- packed/batch、显存比例、批量大小主要影响速度与资源。也可能有数值误差，需要留意临界样本变化，不能宣传为推理能力提升。
+- JSON约束增强输出格式稳定性，不自动提高语义正确率。
+
+审查符合数（分开报告旧样本与新样本）：
+prior_review
+jev32B_alignednatural_p1 | overlap: 13/14，较明确子集12/12 | pause: 10/13，较明确子集3/3
+jev32B_alignednatural_p4 | overlap: 13/14，较明确子集12/12 | pause: 9/13，较明确子集3/3
+jev32B_enum_p1 | overlap: 11/14，较明确子集9/12 | pause: 9/13，较明确子集3/3
+jev32B_enum_p4 | overlap: 13/14，较明确子集11/12 | pause: 10/13，较明确子集3/3
+jev4B_alignednatural_p1 | overlap: 7/14，较明确子集7/12 | pause: 4/13，较明确子集0/3
+jev4B_alignednatural_p4 | overlap: 8/14，较明确子集8/12 | pause: 5/13，较明确子集0/3
+jev4B_enum_p1 | overlap: 7/14，较明确子集6/12 | pause: 5/13，较明确子集0/3
+jev4B_enum_p4 | overlap: 9/14，较明确子集8/12 | pause: 5/13，较明确子集0/3
+jev4B_natural_p1 | overlap: 7/14，较明确子集7/12 | pause: 5/13，较明确子集0/3
+jev4B_natural_p4 | overlap: 7/14，较明确子集7/12 | pause: 5/13，较明确子集0/3
+qwen_baseline | overlap: 13/14，较明确子集12/12 | pause: 9/13，较明确子集3/3
+qwen_thinking | overlap: 14/14，较明确子集12/12 | pause: 11/13，较明确子集3/3
+fresh_review
+jev32B_alignednatural_p1 | overlap: 7/8，较明确子集5/5 | pause: 4/7，较明确子集2/2
+jev32B_alignednatural_p4 | overlap: 7/8，较明确子集5/5 | pause: 5/7，较明确子集2/2
+jev32B_enum_p1 | overlap: 7/8，较明确子集4/5 | pause: 7/7，较明确子集2/2
+jev32B_enum_p4 | overlap: 8/8，较明确子集5/5 | pause: 6/7，较明确子集2/2
+jev4B_alignednatural_p1 | overlap: 5/8，较明确子集3/5 | pause: 1/7，较明确子集0/2
+jev4B_alignednatural_p4 | overlap: 6/8，较明确子集4/5 | pause: 2/7，较明确子集1/2
+jev4B_enum_p1 | overlap: 5/8，较明确子集3/5 | pause: 3/7，较明确子集1/2
+jev4B_enum_p4 | overlap: 6/8，较明确子集5/5 | pause: 3/7，较明确子集1/2
+jev4B_natural_p1 | overlap: 5/8，较明确子集3/5 | pause: 1/7，较明确子集0/2
+jev4B_natural_p4 | overlap: 5/8，较明确子集3/5 | pause: 1/7，较明确子集0/2
+qwen_baseline | overlap: 8/8，较明确子集5/5 | pause: 5/7，较明确子集2/2
+qwen_thinking | overlap: 7/8，较明确子集5/5 | pause: 5/7，较明确子集2/2
+
+重要口径修正：JEV的默认选项排列hash包含选项文字。原natural实验改变措辞时也隐式改变顺序，不能归因于纯措辞。补充alignednatural：在每个seed下强制与enum使用相同语义选项位置，隔离措辞影响。两类结果分别保留。
+同一模型的选项配置稳定性（不是准确率）：
+4B_p1_overlap_natural: 51/116 翻转 (44.0%)；原标签分布{'INTERRUPT': 63, 'BACKCHANNEL': 48, 'OTHER': 2, 'UNCERTAIN': 3}；改写标签分布{'INTERRUPT': 36, 'OTHER': 52, 'BACKCHANNEL': 27, 'UNCERTAIN': 1}
+4B_p1_pause_natural: 34/116 翻转 (29.3%)；原标签分布{'HESITATION': 47, 'OTHER': 57, 'TURN_TRANSITION': 8, 'UNCERTAIN': 4}；改写标签分布{'HESITATION': 30, 'OTHER': 85, 'TURN_TRANSITION': 1}
+4B_p1_overlap_alignednatural: 56/116 翻转 (48.3%)；原标签分布{'INTERRUPT': 63, 'BACKCHANNEL': 48, 'OTHER': 2, 'UNCERTAIN': 3}；改写标签分布{'INTERRUPT': 41, 'OTHER': 53, 'BACKCHANNEL': 21, 'UNCERTAIN': 1}
+4B_p1_pause_alignednatural: 30/116 翻转 (25.9%)；原标签分布{'HESITATION': 47, 'OTHER': 57, 'TURN_TRANSITION': 8, 'UNCERTAIN': 4}；改写标签分布{'OTHER': 84, 'HESITATION': 31, 'TURN_TRANSITION': 1}
+4B_p4_overlap_natural: 40/116 翻转 (34.5%)；原标签分布{'INTERRUPT': 42, 'BACKCHANNEL': 47, 'UNCERTAIN': 8, 'OTHER': 19}；改写标签分布{'INTERRUPT': 37, 'OTHER': 51, 'BACKCHANNEL': 27, 'UNCERTAIN': 1}
+4B_p4_pause_natural: 29/116 翻转 (25.0%)；原标签分布{'HESITATION': 57, 'OTHER': 49, 'UNCERTAIN': 3, 'TURN_TRANSITION': 7}；改写标签分布{'HESITATION': 45, 'OTHER': 71}
+4B_p4_overlap_alignednatural: 47/116 翻转 (40.5%)；原标签分布{'INTERRUPT': 42, 'BACKCHANNEL': 47, 'UNCERTAIN': 8, 'OTHER': 19}；改写标签分布{'OTHER': 62, 'INTERRUPT': 24, 'BACKCHANNEL': 29, 'UNCERTAIN': 1}
+4B_p4_pause_alignednatural: 24/116 翻转 (20.7%)；原标签分布{'HESITATION': 57, 'OTHER': 49, 'UNCERTAIN': 3, 'TURN_TRANSITION': 7}；改写标签分布{'HESITATION': 54, 'OTHER': 58, 'TURN_TRANSITION': 4}
+32B_p1_overlap_alignednatural: 43/116 翻转 (37.1%)；原标签分布{'INTERRUPT': 66, 'BACKCHANNEL': 38, 'OTHER': 11, 'UNCERTAIN': 1}；改写标签分布{'OTHER': 48, 'BACKCHANNEL': 43, 'INTERRUPT': 25}
+32B_p1_pause_alignednatural: 11/116 翻转 (9.5%)；原标签分布{'HESITATION': 56, 'TURN_TRANSITION': 58, 'OTHER': 2}；改写标签分布{'HESITATION': 64, 'TURN_TRANSITION': 52}
+32B_p4_overlap_alignednatural: 38/116 翻转 (32.8%)；原标签分布{'INTERRUPT': 57, 'BACKCHANNEL': 40, 'OTHER': 18, 'UNCERTAIN': 1}；改写标签分布{'OTHER': 52, 'BACKCHANNEL': 41, 'INTERRUPT': 23}
+32B_p4_pause_alignednatural: 9/116 翻转 (7.8%)；原标签分布{'HESITATION': 53, 'TURN_TRANSITION': 63}；改写标签分布{'HESITATION': 62, 'TURN_TRANSITION': 54}
+
+Smart Turn的适用边界与实测：
+{"prior_review": {"n": 11, "endpoint_proxy_matches": 9, "note": "Proxy only: endpoint completion != observed transition, unfinished != hesitation"}, "fresh_review": {"n": 6, "endpoint_proxy_matches": 5, "note": "Proxy only: endpoint completion != observed transition, unfinished != hesitation"}, "distribution": {"UNFINISHED": 1017, "FINISHED": 483}}
+FINISHED与TURN_TRANSITION、UNFINISHED与HESITATION不是同一概念；上述endpoint_proxy_matches仅说明两类倾向方向是否一致，不能称为四分类准确率。
+{
+  "n": 1500,
+  "seconds": 37.264194034039974,
+  "events_per_second": 40.25311801000674,
+  "load_seconds": 0.14063482731580734,
+  "warm_seconds": 0.22610797360539436,
+  "device": "CPU",
+  "threads": 4,
+  "note": "End-of-turn evidence only, not hesitation/transition labels; last8sec of previous clip ending 0.5sec after left word"
+}
+
+Smart Turn尾部静音配置对照：
+{
+  "n": 1500,
+  "state_changes": 157,
+  "tail02_distribution": {
+    "UNFINISHED": 1128,
+    "FINISHED": 372
+  },
+  "review": {
+    "prior_review": {
+      "0.5": {
+        "n": 11,
+        "endpoint_proxy_matches": 9
+      },
+      "0.2": {
+        "n": 11,
+        "endpoint_proxy_matches": 8
+      }
+    },
+    "fresh_review": {
+      "0.5": {
+        "n": 6,
+        "endpoint_proxy_matches": 5
+      },
+      "0.2": {
+        "n": 6,
+        "endpoint_proxy_matches": 4
+      }
+    }
+  }
+}
+0.5秒改为0.2秒后，1500条中157条结束状态变化；本次审查代理符合数由14/17降至12/17。样本小且不是金标准，不据此宣称普遍最优；目前没有替换0.5秒配置的证据。
+
+资源/耗时：Qwen以8并发、单H100运行；4B以batch2、32B以batch1运行，均使用原目标单声道音频和相同文字上下文。JEV耗时包含各变体首个推理，Qwen各变体另做预热，严格速度排名需统一后端/批量/预热。
+qwen_study_runtime.json
+[
+  {
+    "variant": "baseline",
+    "task": "overlap",
+    "n": 116,
+    "seconds": 20.25996431708336
+  },
+  {
+    "variant": "baseline",
+    "task": "pause",
+    "n": 116,
+    "seconds": 20.306977786123753
+  },
+  {
+    "variant": "thinking",
+    "task": "overlap",
+    "n": 116,
+    "seconds": 684.3193132206798
+  },
+  {
+    "variant": "thinking",
+    "task": "pause",
+    "n": 116,
+    "seconds": 783.7746891342103
+  }
+]
+jev4B_runtime.json
+{
+  "load_seconds": 51.45863329619169,
+  "runs": [
+    {
+      "task": "overlap",
+      "wording": "enum",
+      "n_perm": 1,
+      "n": 116,
+      "seconds": 8.313509777188301
+    },
+    {
+      "task": "pause",
+      "wording": "enum",
+      "n_perm": 1,
+      "n": 116,
+      "seconds": 7.1112320125103
+    },
+    {
+      "task": "overlap",
+      "wording": "natural",
+      "n_perm": 1,
+      "n": 116,
+      "seconds": 6.105675540864468
+    },
+    {
+      "task": "pause",
+      "wording": "natural",
+      "n_perm": 1,
+      "n": 116,
+      "seconds": 6.893008094280958
+    },
+    {
+      "task": "overlap",
+      "wording": "enum",
+      "n_perm": 4,
+      "n": 116,
+      "seconds": 7.6643533408641815
+    },
+    {
+      "task": "pause",
+      "wording": "enum",
+      "n_perm": 4,
+      "n": 116,
+      "seconds": 8.555028159171343
+    },
+    {
+      "task": "overlap",
+      "wording": "natural",
+      "n_perm": 4,
+      "n": 116,
+      "seconds": 8.13572782278061
+    },
+    {
+      "task": "pause",
+      "wording": "natural",
+      "n_perm": 4,
+      "n": 116,
+      "seconds": 9.017793279141188
+    }
+  ],
+  "includes_first_inference": true
+}
+jev4B_alignednatural_runtime.json
+{
+  "load_seconds": 49.4431383498013,
+  "runs": [
+    {
+      "task": "overlap",
+      "wording": "alignednatural",
+      "n_perm": 1,
+      "n": 116,
+      "seconds": 8.406348071992397
+    },
+    {
+      "task": "pause",
+      "wording": "alignednatural",
+      "n_perm": 1,
+      "n": 116,
+      "seconds": 7.00955630466342
+    },
+    {
+      "task": "overlap",
+      "wording": "alignednatural",
+      "n_perm": 4,
+      "n": 116,
+      "seconds": 8.033824633806944
+    },
+    {
+      "task": "pause",
+      "wording": "alignednatural",
+      "n_perm": 4,
+      "n": 116,
+      "seconds": 8.981059074401855
+    }
+  ],
+  "includes_first_inference": true
+}
+jev32B_runtime.json
+{
+  "load_seconds": 197.98019110783935,
+  "runs": [
+    {
+      "task": "overlap",
+      "wording": "enum",
+      "n_perm": 1,
+      "n": 116,
+      "seconds": 23.29504268243909
+    },
+    {
+      "task": "pause",
+      "wording": "enum",
+      "n_perm": 1,
+      "n": 116,
+      "seconds": 23.47094175592065
+    },
+    {
+      "task": "overlap",
+      "wording": "alignednatural",
+      "n_perm": 1,
+      "n": 116,
+      "seconds": 20.90236935764551
+    },
+    {
+      "task": "pause",
+      "wording": "alignednatural",
+      "n_perm": 1,
+      "n": 116,
+      "seconds": 23.117037680000067
+    },
+    {
+      "task": "overlap",
+      "wording": "enum",
+      "n_perm": 4,
+      "n": 116,
+      "seconds": 27.716920346021652
+    },
+    {
+      "task": "pause",
+      "wording": "enum",
+      "n_perm": 4,
+      "n": 116,
+      "seconds": 30.572305887937546
+    },
+    {
+      "task": "overlap",
+      "wording": "alignednatural",
+      "n_perm": 4,
+      "n": 116,
+      "seconds": 29.73588664084673
+    },
+    {
+      "task": "pause",
+      "wording": "alignednatural",
+      "n_perm": 4,
+      "n": 116,
+      "seconds": 31.87465114146471
+    }
+  ],
+  "includes_first_inference": true
+}
+
+输出完整性：
+{
+  "jev32B_alignednatural_p1.jsonl": {
+    "n": 232,
+    "valid": 232,
+    "errors": 0,
+    "missing": 0,
+    "truncated": 0
+  },
+  "jev32B_alignednatural_p4.jsonl": {
+    "n": 232,
+    "valid": 232,
+    "errors": 0,
+    "missing": 0,
+    "truncated": 0
+  },
+  "jev32B_enum_p1.jsonl": {
+    "n": 232,
+    "valid": 232,
+    "errors": 0,
+    "missing": 0,
+    "truncated": 0
+  },
+  "jev32B_enum_p4.jsonl": {
+    "n": 232,
+    "valid": 232,
+    "errors": 0,
+    "missing": 0,
+    "truncated": 0
+  },
+  "jev4B_alignednatural_p1.jsonl": {
+    "n": 232,
+    "valid": 232,
+    "errors": 0,
+    "missing": 0,
+    "truncated": 0
+  },
+  "jev4B_alignednatural_p4.jsonl": {
+    "n": 232,
+    "valid": 232,
+    "errors": 0,
+    "missing": 0,
+    "truncated": 0
+  },
+  "jev4B_enum_p1.jsonl": {
+    "n": 232,
+    "valid": 232,
+    "errors": 0,
+    "missing": 0,
+    "truncated": 0
+  },
+  "jev4B_enum_p4.jsonl": {
+    "n": 232,
+    "valid": 232,
+    "errors": 0,
+    "missing": 0,
+    "truncated": 0
+  },
+  "jev4B_natural_p1.jsonl": {
+    "n": 232,
+    "valid": 232,
+    "errors": 0,
+    "missing": 0,
+    "truncated": 0
+  },
+  "jev4B_natural_p4.jsonl": {
+    "n": 232,
+    "valid": 232,
+    "errors": 0,
+    "missing": 0,
+    "truncated": 0
+  },
+  "qwen_baseline.jsonl": {
+    "n": 232,
+    "valid": 232,
+    "errors": 0,
+    "missing": 0,
+    "truncated": 0
+  },
+  "qwen_thinking.jsonl": {
+    "n": 232,
+    "valid": 232,
+    "errors": 0,
+    "missing": 0,
+    "truncated": 0
+  },
+  "reference_integrity": "Candidate inference scripts only read study_inputs, not review labels. Human accuracy unverified."
+}
+
+工程限制与建议
+1. 保留OTHER/UNCERTAIN，先判断原话轮是否延续、对方是否实质接话，再判断目标事件，避免把所有重叠强判为打断/反馈。
+2. 普通停顿与犹豫需不同证据。Smart Turn只提供结束信号，不能将未结束直接改写成犹豫。
+3. 现有置信度都未用独立Seamless参考标签校准；不能仅凭0.9或双模型一致放行训练。
+4. 自动复判仍不明确的事件保留未决，不依赖人工复核，也不强行制造监督标签。
+5. 用户提供仓库的v4为演示流水线：原代码未做diarization，且把finished映射为turn_taking；本次Seamless实验已有分说话人轨道，不直接沿用该映射。仓库固定commit c5692d8c42ef369f634543a409dfcd7b9d2becff。
+6. 配置模板包含实验值和未部署的验收策略；它不是对原主流水线的自动覆盖。仅Qwen参数分组与JEV mode/seed已由实验脚本读取，n_perm与batch按命令行对照。
+
+复现入口
+select_experiment.py：固定抽样；run_jev_study.py：两规模、两措辞、n_perm=1/4；run_qwen_study.py：原配置与思考配置；run_smart_turn.py：完整停顿集合；analyze_study.py / audit_study.py：分析与完整性校验。
+远端实验目录：/data/L202500493/duplex_postprocess/runs/model_config_study_20261109
+模型revision与来源：research_sources.json；32B镜像逐文件哈希核对记录：weights_sha256_verified.json（生成后）。
+
+两任务各1500条完整验证：
+{
+  "n": 3000,
+  "by_task": {
+    "overlap": {
+      "n": 1500,
+      "labels": {
+        "BACKCHANNEL": 487,
+        "OTHER": 239,
+        "INTERRUPT": 748,
+        "UNCERTAIN": 26
+      },
+      "qwen_agreements": 1128,
+      "old_jev4_agreements": 1114,
+      "target_consensus_with_qwen": 984,
+      "qwen_matrix": {
+        "BACKCHANNEL|BACKCHANNEL": 474,
+        "BACKCHANNEL|OTHER": 50,
+        "OTHER|INTERRUPT": 157,
+        "OTHER|OTHER": 143,
+        "INTERRUPT|INTERRUPT": 510,
+        "INTERRUPT|OTHER": 46,
+        "BACKCHANNEL|INTERRUPT": 81,
+        "OTHER|BACKCHANNEL": 8,
+        "OTHER|UNCERTAIN": 8,
+        "INTERRUPT|UNCERTAIN": 14,
+        "BACKCHANNEL|UNCERTAIN": 3,
+        "INTERRUPT|BACKCHANNEL": 5,
+        "UNCERTAIN|UNCERTAIN": 1
+      }
+    },
+    "pause": {
+      "n": 1500,
+      "labels": {
+        "HESITATION": 719,
+        "TURN_TRANSITION": 768,
+        "OTHER": 13
+      },
+      "qwen_agreements": 1115,
+      "old_jev4_agreements": 458,
+      "target_consensus_with_qwen": 1113,
+      "qwen_matrix": {
+        "HESITATION|HESITATION": 665,
+        "TURN_TRANSITION|HESITATION": 38,
+        "TURN_TRANSITION|TURN_TRANSITION": 448,
+        "OTHER|HESITATION": 15,
+        "HESITATION|TURN_TRANSITION": 291,
+        "UNCERTAIN|TURN_TRANSITION": 1,
+        "OTHER|OTHER": 2,
+        "HESITATION|OTHER": 11,
+        "OTHER|TURN_TRANSITION": 28,
+        "UNCERTAIN|HESITATION": 1
+      }
+    }
+  },
+  "accuracy_verified": false,
+  "config": {
+    "model": "DuplexJev-32B-Para v1.5",
+    "wording": "enum",
+    "n_perm": 4,
+    "seed": 0,
+    "batch_size_per_gpu": 1,
+    "gpus": 4
+  },
+  "comparison_note": "Old4B differs in both size and n_perm; agreement is not accuracy.",
+  "pilot_repeat_changes": [],
+  "runtime": {
+    "compute_window_seconds": 193.79713201522827,
+    "compute_window_events_per_second": 15.480105246161562,
+    "sum_worker_processing_seconds": 769.4475997239351,
+    "process_to_last_result_seconds": 598.7937552928925,
+    "model_load_seconds": [
+      391.3542338721454,
+      391.3393637649715,
+      391.34963131323457,
+      391.1446484737098
+    ],
+    "scope": "4 GPUs concurrently; compute window from first worker first task to last task finished, includes inter-task IO and first inference; process window additionally includes startup/import/load"
+  }
+}
+双模型一致的目标标签2097条（旧4B方案1478条），增加619条只是候选一致标签，不自动等于新增有效训练数据。
+32B在1500条停顿中给出768条换轮、719条犹豫、仅13条OTHER、0条UNCERTAIN；需要留意普通停顿被强分到两类的偏向。Qwen的967条HESITATION中有291条被32B判为TURN_TRANSITION，不能单凭任何一方置信度裁决。
+较明确的22条审查子集：Qwen原配置和思考配置均22条符合，32B枚举+n_perm4为21条，4B同配置14条。因此总审查37比35不证明32B全面优于Qwen；更合理的是替代4B作为音频侧交叉判断。
+
+另有8条改判事件的事后诊断，见config_change_comparison.json；这批按改判筛选，不计入42条主审查符合数。

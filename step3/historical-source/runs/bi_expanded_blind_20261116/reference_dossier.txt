@@ -1,0 +1,884 @@
+=== B01 V03_S0221_I00000487 ongoing_entry core=[123.634, 128.634] ===
+[33.101-42.148] P1422: Yeah. Right, right, right. Right.
+[43.559-79.442] P1488: But honestly, the feelings I had initially were guilt and a little bit of comparison because all my friends and colleagues went off to law school to do amazing things. But on the flip side of it, I now work for myself online and I have traveled the world consistently for three years and I definitely wouldn't have been able to do that had I been in law school and or at a law firm or any kind of law job. Because I think it is one of those jobs that cannot be remote. So after going through the guilt and frustration, I feel now relieved and happy. And I think, if anything, law school will always be there if I wanted to go back.
+[79.515-79.735] P1422: Yeah.
+[79.902-81.583] P1488: But I don't really regret it. Yeah.
+[82.156-91.120] P1422: I'm glad that you've come out of that with no regret. What was, I'm curious, what was the inner monologue that you were having that led to your decision not to? Okay.
+[91.227-105.754] P1488: Yeah, I was working in a corporate setting that was very cutthroat during COVID, and they allowed us to work from home basically five days a week. But when COVID was over, they wanted us to go back five days a week, no hybrid, no flexibility.
+[105.591-105.771] P1422: Wow.
+[105.774-109.876] P1488: And I was like, oh, I don't love this job enough to do that. And there was no flexibility, and that was the thing.
+[108.392-108.572] P1422: Yeah.
+[110.837-124.785] P1488: So I was like, I think I can figure out something for myself to do online and then travel the world and see how it goes. And I've never looked back since. So had it not been for COVID, I think I definitely would have a law degree right now, which is the crazy part.
+[124.434-124.715] P1422: Okay.
+[124.985-125.225] P1488: Yeah.
+[125.335-129.855] P1422: Okay. And you're happy that you COVID interjected and disrupted.
+[128.987-130.428] P1488: Yeah. Yeah.
+[129.875-130.355] P1422: Yeah.
+[130.769-136.332] P1488: I was a very, like, I had a linear, like, vision. And now my vision is, like, squiggly.
+[136.513-139.976] P1422: Yeah, yeah, yeah.
+[136.692-140.475] P1488: Like, we're still going to the top, but we're taking a detour. So, yeah.
+[139.996-143.599] P1422: Yeah, I mean, squiggles are more interesting than straight lines.
+[143.877-144.738] P1488: Yeah, exactly.
+[144.220-146.422] P1422: So, you know, you gotta zig and zag sometimes.
+[144.758-149.914] P1488: Okay. Wasn't what I hoped for, but in the best way possible.
+[150.125-154.649] P1422: Right, right, yeah.
+[150.434-150.614] P1488: Yeah.
+[154.970-160.635] P1422: The only really happy lawyers I know are ones who are, who became agents in the entertainment industry.
+[160.658-161.298] P1488: Interesting.
+[161.452-169.359] P1422: Yeah, I have a couple of people who had law degrees and got their JDs, and then they ended up, you know, entertainment law, so it's like a little bit.
+CANDIDATES (asterisk = scored core)
+ C1 P1488->P1422 [119.881-121.642] had it not been for COVID, I think I
+ C2 P1488->P1422 [122.103-124.785] definitely would have a law degree right now, which is the crazy part.
+*C3 P1422->P1488 [124.434-124.715] Okay.
+*C4 P1488->P1422 [124.985-125.225] Yeah.
+*C5 P1422->P1488 [125.335-125.575] Okay.
+*C6 P1422->P1488 [126.015-127.615] And you're happy that you
+*C7 P1422->P1488 [128.175-129.855] COVID interjected and disrupted.
+ C8 P1488->P1422 [128.987-129.328] Yeah.
+ C9 P1488->P1422 [129.588-130.428] Yeah.
+ C10 P1422->P1488 [129.875-130.355] Yeah.
+ C11 P1488->P1422 [130.769-131.689] I was a very, like,
+ C12 P1488->P1422 [132.069-132.830] I had a linear,
+ C13 P1488->P1422 [133.370-133.570] like,
+
+=== B02 V02_S3091_I00000500 repeated_receipts core=[206.503, 211.503] ===
+[137.558-158.293] P4059: That sounds cool. I feel like people always do similar things for like No Nut November or something like that. But yeah, I would say abstinence. I've been abstinent for three years. Well, three years, yeah.
+[155.343-158.924] P4064: Wow. Wow, that's incredible.
+[159.454-166.820] P4059: Thank you. But yeah, I would encourage other people to do it, because I think for guys, they call it semen retention.
+[167.287-167.887] P4064: Tell me why.
+[168.817-178.164] P4059: For guys, specifically for me, I was in the hookup culture before, and it just did not serve me at all.
+[169.568-178.772] P4064: For you, abstinence, yeah. Why you chose. I know.
+[178.725-181.007] P4059: It didn't serve my mind, my body, or my soul.
+[178.792-185.675] P4064: Mm-hmm.
+[181.107-228.041] P4059: So I never had good results with it. And I feel like I was only doing it because other people did it. now like now that i'm not doing it at all i feel like my mind is so much clearer if i if i find myself liking someone is usually because i actually like them as a person yeah yeah yeah exactly like I mean, it is weird, because once you like someone, it's harder to, I don't know how to explain it.
+[201.731-218.184] P4064: And you're making that choice because you chose, not because I had to or because I didn't want to be alone or because this person kept fucking bugging me or because everyone else do. And if you have the choice, that means you have control over something, even when life is crazy sometimes.
+[228.462-237.725] P4059: But when you really like someone, the sexual attraction is stronger when you haven't done it in a long time, because the pull is more.
+[230.875-238.942] P4064: Mm-hmm. Got it.
+[238.905-239.685] P4059: That makes sense.
+[239.243-248.000] P4064: Come
+[240.186-246.348] P4059: But with that, it's easier to say no, because if I'm being pulled this hard, OK, I need to get out of here.
+CANDIDATES (asterisk = scored core)
+ C1 P4059->P4064 [203.281-203.601] yeah
+ C2 P4064->P4059 [203.733-205.774] because you chose, not because I
+*C3 P4064->P4059 [206.535-210.338] had to or because I didn't want to be alone or because this person kept fucking bugging me
+*C4 P4059->P4064 [207.303-207.824] yeah yeah
+*C5 P4059->P4064 [208.644-209.745] exactly like
+*C6 P4064->P4059 [210.798-212.139] or because everyone else do.
+ C7 P4064->P4059 [212.320-212.480] And
+ C8 P4064->P4059 [212.880-215.462] if you have the choice, that means you have control over something,
+ C9 P4064->P4059 [216.063-216.263] even
+
+=== B03 V02_S3137_I00000384 question_end core=[158.995, 163.995] ===
+[0.892-6.097] P4021: there a saxophone in here? Yeah.
+[7.370-48.809] P4028: So one time when someone came to my aid when I needed help, man, a lot of times, man, a lot of my homies, a lot of my homies come through. They come through. So there was one time when, so there was one time I had a fight in the club. I had a fight in the club. It was with this politician's kid. And he was with a group of feds too, type of shit. He was with a group of fed bodyguards too. I was like, we squabbled, we squabbled. And then what happened was homie tried to like, I had to be squabbled, right?
+[44.320-56.374] P4021: That's messed up.
+[49.730-150.352] P4028: He jumped me. It was like V2 with me, my homie, and other dudes that tried to fight on us. Shit, my partner's face was fucked. I was surprised my face wasn't messed up. I was blocking like this, and I was down on the ground getting stomped on. I'm surprised. When I dipped, I was like, okay, shit, so my end's kind of bruised over here, and I'm like, okay, you know what? Fuck is what it is. Dipped away, was able to got out, my friend too. Then one of my homies called me. He was like, hey yo, you good? Billy, you good? I'm like, yeah, I'm good. What's up? He's like, why'd you get in the fight? I was like, bro, how'd you know? He's like, bro, bro, bro, just how'd you get in the fight? I was like, shit, this long thing happened. He was like, fuck. All right, you know what? I told him, he was asking me like, who the fuck are you, blah, blah, blah, because like My homie knows, he be knowing people. He's like, oh, who the fuck is this guy? Who the fuck is this guy? He's trying to ask about me. It's like, you don't even know nothing about him or nothing. All right, enjoy your night. He just came to my help. And when shit tried to always come to my shit, he's always there to go stay in the front. Hey, yo, that's my brother. That's my brother. That's my brother. That's my man's bro. So it's like, I be having homies like that. There was one other time, too, man. I was acting up in the club. And then, because I was acting up, because I was trying to dance with some dude's girl, to be honest. And the homies was like, and then the girl, as I was trying to dance with her, she dragged me down to go, I thought she was trying to bring me to the bathroom. She brought me down, and then I see a group of dudes, bro, over here, like, oh shit, trying to like, that's my girl. I was like, oh shit.
+[150.053-151.835] P4021: Oh, why would she do that?
+[150.992-158.635] P4028: My mom was like, oh shit. If a dude tried to punch me, I'd weave back. I was like, fuck, that's like seven dudes.
+[157.564-158.646] P4021: That's cold blooded.
+[158.755-159.535] P4028: I'm running away.
+[158.986-159.888] P4021: Why would she do that?
+[159.635-181.841] P4028: I ran, I ran, I ran. Then I had people with me. I was deep. We all had school that day. We were all like, let's go up to the club. It was like, okay. Shit, it was of us. It was like a squabble for them. I was like, okay, don't fuck that. I mean, shit, I was trying to have some fun, but then, okay, shit.
+[183.273-187.554] P4021: Damn.
+[183.439-185.721] P4028: So that was kind of mad. It was kind of fun.
+[188.214-196.000] P4021: I got a lot of stories like that. So many. I'm serious. And I forget about them until people bring them. I said, oh yeah, I remember.
+CANDIDATES (asterisk = scored core)
+ C1 P4028->P4021 [155.914-157.234] I was like, fuck, that's like
+ C2 P4021->P4028 [157.564-158.646] That's cold blooded.
+ C3 P4028->P4021 [157.894-158.635] seven dudes.
+ C4 P4028->P4021 [158.755-159.535] I'm running away.
+ C5 P4021->P4028 [158.986-159.888] Why would she do that?
+*C6 P4028->P4021 [159.635-160.955] I ran, I ran, I ran.
+*C7 P4028->P4021 [162.796-163.196] Then I
+*C8 P4028->P4021 [163.956-164.376] had
+ C9 P4028->P4021 [164.876-165.336] people with me.
+ C10 P4028->P4021 [165.396-165.597] I was
+ C11 P4028->P4021 [165.957-166.197] deep.
+ C12 P4028->P4021 [166.217-167.777] We all had school that day.
+ C13 P4028->P4021 [167.817-168.897] We were all like,
+
+=== B04 V03_S1512_I00000458 question_end core=[114.809, 119.809] ===
+[61.219-64.260] P4109: The shelf is out of reach.
+[71.535-74.276] P1628: There are three cats. I mean, there are three cars.
+[75.577-96.211] P4109: There are three cars and they're going down the road and they have three cats in them. She has two dogs. Dogs. I like that.
+[92.663-93.503] P1628: The lemon is sour.
+[96.591-101.554] P4109: I like sour. The coffee is bitter. I love coffee.
+[101.106-102.387] P1628: I love bitter coffee.
+[102.635-102.955] P4109: Me too.
+[107.629-115.753] P1628: Someone asked, like, it's like for a coffee house, what's your favorite coffee? And I think they want you to put some flavor. And I'm like, black?
+[115.609-121.312] P4109: No, no paper.
+[115.833-125.197] P1628: Like, black coffee? Like, what's your favorite coffee? What does that say about you? I'm like, what does that say about you?
+[121.452-131.038] P4109: Can you say it again?
+[126.438-147.487] P1628: The school is close to the library. The school is close to the library. The road is at the end of the street.
+[136.046-143.870] P4109: I'm going to take out a couple of books. I got it. The road is at the end of the street.
+[147.547-158.535] P1628: The road is at the end of the street. There's these spatula questions get to me because I think of where I am in space. So I think I have a walk, I'm walking.
+[159.757-165.160] P4109: Good. You're up.
+[167.329-177.352] P1628: Did I say the school is close to the library? He's lifting the weights. Awesome.
+[179.128-188.972] P4109: Yeah. He's getting strong. He is pushing the cart.
+[193.674-204.121] P1628: I mean, they usually have like bad backs when they do it and limp a little. They do. She is throwing the ball.
+CANDIDATES (asterisk = scored core)
+ C1 P1628->P4109 [113.032-114.592] And I think they want you to put some flavor.
+ C2 P1628->P4109 [114.612-115.753] And I'm like, black?
+*C3 P4109->P1628 [115.609-116.730] No, no
+*C4 P1628->P4109 [115.833-116.913] Like, black coffee?
+*C5 P1628->P4109 [116.953-118.194] Like, what's your favorite coffee?
+*C6 P1628->P4109 [119.635-120.835] What does that say about you?
+*C7 P4109->P1628 [119.752-121.312] paper.
+ C8 P1628->P4109 [120.915-122.016] I'm like, what
+ C9 P4109->P1628 [121.452-121.753] Can
+ C10 P4109->P1628 [122.293-123.333] you say
+ C11 P1628->P4109 [122.476-123.316] does that
+ C12 P1628->P4109 [124.017-124.877] say about
+
+=== B05 V00_S0677_I00000504 question_end core=[43.224, 48.224] ===
+[1.010-10.855] P0383A: What's the last time when you felt like a positive feeling deeply, like pride, joy? Yeah, like a very all positive.
+[7.695-15.387] P0122: All at one time. I was in Salem, Oregon.
+[14.798-19.740] P0383A: Oh, Oregon, okay.
+[17.026-21.909] P0122: Sitting at a old, well, it's in an old building.
+[19.800-24.763] P0383A: Uh-huh.
+[21.929-32.536] P0122: It was a bar and steakhouse. And I was sitting at the bar and I ordered a steak dinner, like full-fledged with the potato and the sides and everything.
+[29.666-33.498] P0383A: Oof. We're having meat that day.
+[32.556-41.762] P0122: I had my glass of red wine right there and I took a piece and I was chewing on it and I just felt like I was on cloud nine because I was on a gig.
+[42.165-42.466] P0383A: Okay.
+[42.762-45.445] P0122: And I was by myself.
+[43.727-44.347] P0383A: You're by yourself?
+[46.566-53.313] P0122: I was flown out there by the company to handle an animatronic dragon, like a six-foot dragon.
+[53.535-53.795] P0383A: What?
+[53.733-55.595] P0122: And it was for the fairs.
+[55.176-55.676] P0383A: Who are you?
+[55.715-60.119] P0122: And my uniform was that of if you're a jungle, what do you call it?
+[66.012-67.412] P0383A: A jungler, a jungress.
+[66.265-69.230] P0122: Like a person with the hat and the shorts.
+[68.553-70.993] P0383A: A safari Jane, yeah.
+[69.330-79.266] P0122: Yeah, safari, thank you. Safari outfit. And it was for this fair. And they have them every year all over the place.
+CANDIDATES (asterisk = scored core)
+ C1 P0383A->P0122 [42.165-42.466] Okay.
+ C2 P0122->P0383A [42.762-43.363] And
+*C3 P0383A->P0122 [43.727-44.347] You're by yourself?
+*C4 P0122->P0383A [44.024-45.445] I was by myself.
+*C5 P0122->P0383A [46.566-48.728] I was flown out there by the company
+ C6 P0122->P0383A [49.148-53.313] to handle an animatronic dragon, like a six-foot dragon.
+
+=== B06 V01_S0196_I00000461 ongoing_entry core=[35.995, 40.995] ===
+[0.000-38.615] P1364: fault with yourself. So even just looking and saying, I did this wrong, I did that wrong. It's not necessarily the easiest thing to pinpoint because for most people, again, myself included, we think we're always right, or most of the time we think we're right. But for me, I do know that I have an issue with getting things done on my time. Sometimes I probably lash out or I expect you to move at my pace with certain things and that's not necessarily the case because we move at different pace, different levels of experience.
+[36.429-39.138] P1365: Mm-hmm. Mm-hmm.
+[39.735-56.061] P1364: Sincerely want to apologize because sometimes I do know that I say things out of timing that might be hurtful to you and that's never my intention. All right, so I'm sorry. I would say, like...
+[54.067-111.458] P1365: Yeah, I would say like we both have our different paces and sometimes I'm like, I guess I think it's depending on what the situation is or what we're talking about or what we're doing. We both place different importance on that particular thing. So for you, something might be like, we need to get it. And for me, it's just like, okay, we don't need to be like moving this fast or yeah, I'm gonna get it done. But for you, you wanna get it done right away. For me, I'm just like, okay, all right. Like I'm doing it, but I'm just, you're not, I'm not moving as fast as you would want me to. So I guess, yeah, I feel like that would both affect us. It's just, we both have different things that we want to go at a different speed. So your speed might be like, we need to be done in five seconds. My speed might be seconds. So even though it's still getting done, it's just not fast enough for you or it's not fast enough for me. So yeah.
+[112.198-118.121] P1364: Yeah, and that's kind of where communication comes in as well because, as you said, we have different priorities with a lot of stuff.
+[112.355-112.776] P1365: Yeah.
+[118.161-169.993] P1364: So remember when we were talking about the coach and for you it was, let's get the coach now, let's get the coach now. And for me it was like, ah, the coach can wait. But then when you verbally expressed to me that, hey, where I'm sitting is not really comfortable. You have a comfortable sitting spot and I'd like to get a comfortable sitting spot as well. For me that was a very good moment because I was able to, look inwards and realize that yeah okay this is not even this is not balanced gave you the go-ahead you got it done in within a day so that was yeah so that was that was very eye-opening for me um that sometimes the things that i think is important is because i'm only looking at it from my perspective and sometimes it's good to prompt you to express yourself because, again, expressing yourself is not something that you do easily either.
+[150.955-168.329] P1365: Yeah. Yeah. Yeah. Yeah.
+[170.093-178.980] P1364: So that was a very good moment. But going forward, just being mindful of each other's perspective some more. Yeah, that's good. Five,
+CANDIDATES (asterisk = scored core)
+*C1 P1365->P1364 [36.429-36.810] Mm-hmm.
+*C2 P1364->P1365 [36.795-38.615] different levels of experience.
+*C3 P1365->P1364 [38.917-39.138] Mm-hmm.
+*C4 P1364->P1365 [39.735-41.376] Sincerely want to apologize because
+ C5 P1364->P1365 [41.996-43.956] sometimes I do know that I say things
+ C6 P1364->P1365 [44.777-45.237] out of
+
+=== B07 V00_S0063_I00000139 question_end core=[88.731, 93.731] ===
+[13.205-19.750] P0048: I would like to explore speaking more affluent languages in the world.
+[18.952-20.072] P0094: Okay.
+[22.707-36.456] P0048: Slightly an animal person. I have allergies to long-haired cats and dogs. So me being an animal whisperer might not work out when the Allegra doesn't kick in.
+[30.414-37.755] P0094: Yeah. Yeah, yeah. Oh, yeah.
+[37.997-53.144] P0048: But definitely, yeah, expand on foreign languages because I would love to travel. I haven't traveled internationally besides Brazil. Baja, our all-inclusive family vacations, but definitely.
+[52.298-52.578] P0094: Yeah.
+[53.624-75.589] P0048: I comprende espanol, comprende la France, but yeah, and a little bit of sprekencdeutsch from my relatives, but definitely be able to travel to other places and utilize foreign language or expand more on the la French, yeah.
+[55.659-80.087] P0094: Ah, there you go. Ah, yeah. Ah, okay. Yeah. That would be neat. Yeah, just be fluke, go wherever, you know, any country and just be able to communicate.
+[79.445-86.968] P0048: And definitely jump on that London train and hit France, go down to Germany, come back up.
+[83.661-90.432] P0094: Yeah. Yeah. Yeah, that would be cool.
+[88.669-95.251] P0048: Who knows? That would be cool, yes. I'm working on the passport. It's in procedure.
+[93.597-93.837] P0094: Yeah.
+[99.293-113.626] P0048: Sure. Your dad stays stationed in San Diego? You guys didn't move?
+[113.732-117.914] P0094: He came back, and then
+CANDIDATES (asterisk = scored core)
+ C1 P0094->P0048 [87.327-87.768] Yeah,
+ C2 P0048->P0094 [88.669-89.569] Who knows?
+*C3 P0094->P0048 [89.290-90.432] that would be cool.
+*C4 P0048->P0094 [90.469-91.870] That would be cool, yes.
+*C5 P0048->P0094 [91.930-93.411] I'm working on the passport.
+*C6 P0048->P0094 [93.431-95.251] It's in procedure.
+*C7 P0094->P0048 [93.597-93.837] Yeah.
+
+=== B08 V01_S0625_I00001220 ongoing_entry core=[166.276, 171.276] ===
+[102.146-108.912] P1863: Yeah, you know, that's a good question. And that was something that I was kind of contemplating in my thesis. And I put a little bit in, but I really wanted to get your perspective.
+[109.028-109.369] P1793: Sure.
+[109.252-111.034] P1863: And I really wanted to know what you think about this.
+[110.953-113.078] P1793: Yeah.
+[111.094-115.337] P1863: Because, you know, I really look up to you. And the work that you do is great. It's phenomenal.
+[114.882-115.804] P1793: Yeah, of course.
+[115.357-118.280] P1863: So if you want to give me some insight, I would really love that. Mm-hmm.
+[118.180-148.928] P1793: Yeah, absolutely. Look, everything is a tool in the toolbox, right? Social media is a tool. It's not replacing anything. It's an evolution of things, right? And AI is going to be the same thing. Some jobs may be automated, but for those people that have the skills and the tools to leverage AI to increase their own output, that's going to be where AI really shines. Now, I don't think we're in a stage yet where like ChatGT before is going to be taking jobs, right? We look two years down the line, who knows where we'll be? So it's going to pay dividends right now if people learn how to use AI so they're equipped for when it really does show up in a couple of years from now.
+[149.433-155.578] P1863: Wow, yeah, that's a great insight. Wow. So how do you think AI is going to impact you and your profession? Are you worried about that at all?
+[155.671-167.756] P1793: Well, I've got tenure, so I think I'm going to be fine. But as far as education goes, it can certainly be a tool for doing research more quickly. Obviously, we've got to vet that research, right? AI is not perfect, not even close.
+[167.030-168.712] P1863: Yeah. Yeah. Not like you.
+[169.574-177.082] P1793: Well, who could be, you know? So let's, you know, take another crack at this, get the next draft over to me, and we can review in the next couple weeks.
+[177.205-181.531] P1863: For sure. Thanks for all the insight. You know, I really appreciate it. I'm going to go make these edits and I'll be back next week. All right.
+[181.466-181.807] P1793: Sounds great.
+CANDIDATES (asterisk = scored core)
+ C1 P1793->P1863 [163.014-165.055] Obviously, we've got to vet that research, right?
+ C2 P1793->P1863 [165.375-166.335] AI is not perfect,
+*C3 P1863->P1793 [167.030-167.711] Yeah.
+*C4 P1793->P1863 [167.076-167.756] not even close.
+*C5 P1863->P1793 [167.951-168.172] Yeah.
+*C6 P1863->P1793 [168.192-168.712] Not like you.
+*C7 P1793->P1863 [169.574-170.995] Well, who could be, you know?
+ C8 P1793->P1863 [171.876-172.157] So
+ C9 P1793->P1863 [172.817-176.141] let's, you know, take another crack at this, get the next draft over to me, and we can
+
+=== B09 V00_S0614_I00000884 ongoing_entry core=[245.143, 250.143] ===
+[218.280-219.161] P0658A: Oh, my God. off.
+[222.623-228.005] P0005A: I know, but so much money to win.
+[223.357-226.200] P0658A: Oh, my God. So much to do.
+[228.025-232.126] P0005A: Yeah, I think you'll love it.
+[229.122-237.569] P0658A: Oh, I hate it. I hate it. I hate it. I want to give a price. Do you want it for that price? You do good at yours. Why do we have to go through all this?
+[237.737-238.958] P0005A: Yeah, it's a little performance.
+[239.671-240.312] P0658A: Oh, God.
+[240.079-243.121] P0005A: But it's a way for us to make money. We have to up-sale, up-sale, up-sale.
+[242.354-246.217] P0658A: I'm not making any money. I'm not selling anything. All I do is wait.
+[245.943-247.304] P0005A: You want to make money or do you want to be broke?
+[247.678-248.599] P0658A: I want to make money.
+[248.705-254.209] P0005A: Exactly. So I'm giving you the great tips so that you can increase your bank account.
+[254.648-257.670] P0658A: Can't do all that. It's just blah, blah, blah, blah, blah.
+[257.112-257.332] P0005A: Yeah.
+[257.790-258.771] P0658A: So much talking.
+[259.233-263.937] P0005A: Yeah, just a little talking. But I think you're very capable of doing it.
+[264.796-270.240] P0658A: How many cars do you think I could realistically sell, let's say, in a month?
+[270.387-275.708] P0005A: Let me think about that. I think with the right attitude, maybe you could sell like five cars a week.
+[277.085-278.185] P0658A: How about with this attitude?
+[279.089-280.710] P0005A: I've sold as many as cars in a week.
+[281.248-282.869] P0658A: You've sold as many as cars a week.
+CANDIDATES (asterisk = scored core)
+ C1 P0005A->P0658A [241.480-243.121] We have to up-sale, up-sale, up-sale.
+ C2 P0658A->P0005A [242.354-243.515] I'm not making any money.
+ C3 P0658A->P0005A [243.555-244.756] I'm not selling anything.
+*C4 P0658A->P0005A [245.356-246.217] All I do is wait.
+*C5 P0005A->P0658A [245.943-247.304] You want to make money or do you want to be broke?
+*C6 P0658A->P0005A [247.678-248.599] I want to make money.
+*C7 P0005A->P0658A [248.705-249.126] Exactly.
+*C8 P0005A->P0658A [249.166-249.766] So I'm giving you
+ C9 P0005A->P0658A [250.807-252.348] the great tips so that you can
+ C10 P0005A->P0658A [253.129-254.209] increase your bank account.
+ C11 P0658A->P0005A [254.648-255.028] Can't do
+
+=== B10 V02_S3448_I00000411 ongoing_entry core=[140.322, 145.322] ===
+[0.000-7.038] P4201: back, it was my mother and she needed help moving. So, you know, that's moms. Anything she asked me to do, if she called me, I got to do it.
+[7.306-7.527] P4187: Right.
+[7.458-21.487] P4201: It's off the strip. So I helped her move from Long Beach all the way to Lancaster, which had me, like, driving to U-Haul, moving furniture around. Have you ever had to help somebody and expect nothing back in return?
+[22.730-90.053] P4187: Um, yeah, you know, I try to, like, you know, if I have a couple dollars on me, you know, especially, like, on the streets, whatever, you know what I mean? I try to help as many people as I can, you know what I mean? And I don't expect nothing. You know how some people be like, you know, I don't want to give them money. They might give out drugs and stuff, but I feel as though when you give somebody something, you shouldn't... It's theirs, you know what I mean? Whatever they want to do with it, it's kind of their business to me, you know what I mean? Because if you're dictating what they're doing with what you gave them, then you ain't really give it to him. It's more like a contract, you know what I mean? So I tried to, like, help. It was a brother at the, um, gas station, like, a couple weeks ago. And, you know, I could tell he probably just got out or something, you know what I mean? But you could tell he was just really starving from scratch. He ain't really, you know, he ain't had no shoes on or whatever, no socks. So, you know, I had some in my trunk that I had just washed my clothes, ironically, you know what I mean? I just, you know what I mean? So I gave him, like, they was clean, so I just gave him some socks, gave him a shirt, um... Gave me some money for some food. Gave me you know what I mean? Just if I have it, you know what I mean? So that's how I like to do it. And I just feel like the universe will bring it back, you know what I mean?
+[90.945-92.407] P4201: Right, so you believe in, like, karma.
+[92.895-93.556] P4187: Oh, absolutely.
+[93.788-100.476] P4201: So, like, when you give it without expecting anything back in return, you automatically gonna get blessed down the line.
+[100.750-136.047] P4187: Yeah, and those come in different forms. See, people think blessings are like always material. You know what I mean? I feel like blessings, you know, come in different forms. Like, you know, you might do something good for somebody and one day, you know, a cop might let you out of a ticket and you might not even realize that that's like you cashing in your good karma card. You know, that karma came and saved you at that time. It'll come, like, at times when you think that, you're like, damn, you know what I mean? This could have went this way. And you don't realize that you put that out there in the universe probably, like, a long time ago. And it just came back around when you needed it.
+[137.017-142.881] P4201: Right, so the good overweighs the bad, basically, which is balance.
+[141.122-143.903] P4187: Well, you need both. You need balance, you know what I mean?
+[142.961-143.801] P4201: OK. Right.
+[143.943-160.531] P4187: And it's not really bad. You know, everything's lessons. You know what I mean? Life is just nothing but a big school. So, you know what I mean? It's just the only thing about life school and regular school. Like, you've got to get an A-plus in every class. You've got to master it or you're going to keep repeating it. You know what I'm saying? So I just look at it as a lesson.
+[160.659-170.448] P4201: experiences, lessons, challenges, but make sure you make a better decision than the last time you were in that same situation.
+[162.152-171.335] P4187: Right. That's wisdom, right.
+[171.309-180.438] P4201: And also seeing yourself, anybody can fall off or go through something in life, so you got to put yourself in somebody else's shoes to help them with nothing in return.
+[178.200-192.090] P4187: Yeah. Right, right, right, right. Yeah, no, absolutely. And that's the problem. People, when they help sometimes, when they're not really helping, they do it because it's like ego, all type of stuff. Something like that.
+CANDIDATES (asterisk = scored core)
+ C1 P4201->P4187 [137.017-137.778] Right, so the good
+ C2 P4201->P4187 [139.158-141.840] overweighs the bad, basically, which is
+*C3 P4187->P4201 [141.122-141.842] Well, you need both.
+*C4 P4201->P4187 [142.461-142.881] balance.
+*C5 P4187->P4201 [142.583-143.903] You need balance, you know what I mean?
+*C6 P4201->P4187 [142.961-143.041] OK.
+*C7 P4201->P4187 [143.281-143.801] Right.
+*C8 P4187->P4201 [143.943-145.164] And it's not really bad.
+*C9 P4187->P4201 [145.244-146.865] You know, everything's lessons.
+ C10 P4187->P4201 [147.485-148.125] You know what I mean?
+ C11 P4187->P4201 [148.225-149.886] Life is just nothing but a big school.
+ C12 P4187->P4201 [150.006-150.226] So,
+
+=== B11 V02_S5160_I00000222 ongoing_entry core=[135.616, 140.616] ===
+[1.169-64.775] P5122: So compromise I made with my partner was. trying to take them to places I knew they'd love to have fun at and just explore and pay a lot of attention to so I would take my place take my places that I picked was like Los Angeles and uh definitely Las Vegas and just places that were more out of the city that we were in and into different cities and places that way that they could get a more exploring kind of day-to-day with me or more of like a more better experience because they get to explore different things see different things and just have you know just a better idea of the kind of person I am outside of my city or home I would say I would say Universal Studios, you know, somewhere there by LA.
+[17.319-62.961] P5197: What places did you take them to? What was your favorite place that you felt like you went and enjoyed yourself and had a good time? Sure, a very good place.
+[67.238-73.667] P5122: Nice place where you're at a high top parking lot where you get to park.
+[73.744-76.405] P5197: Get to see some views. Sure, sure.
+[74.929-100.026] P5122: get to see some views before you help yourself into the facility and the amusement park. I definitely like Universal Studios because it's basically Hollywood but at the same time it's an amusement park where you get to enjoy the amusement park and get to see different things and show them a great time.
+[94.458-136.758] P5197: sure what was one of the like great music parks you went to i've only been to like a couple of them like not you know that's one of them but like what's a good music park you've been to that you say you had a very like good time at six flags for sure never been to six flags so that has to be a good one it has to be a good one Amusement park?
+[109.720-137.997] P5122: It would have to be Six Flags. No, Six Flags. Yeah, I would definitely say Six Flags. You should try it out because it's pretty far from where we live. But when you get there, it's a very huge amusement park. It's probably one of the biggest. They have a lot of roller coasters, a lot of different things that is more different than your typical post amusement parks.
+[138.019-138.479] P5197: For sure.
+[138.077-163.968] P5122: Exactly. I definitely would take even six flags over Universal Studios just based on the type of roller coasters they have. But I definitely like Universal because it's in Hollywood. They have very nice movies that you're familiar with, shows such as The Simpson. And you just get to see a better understanding of who you are as when you were growing up and just bring your little childhood back a little bit.
+[161.266-164.627] P5197: Bring back your childhood a little bit. Okay.
+CANDIDATES (asterisk = scored core)
+ C1 P5122->P5197 [132.914-135.236] is more different than your typical
+*C2 P5197->P5122 [136.058-136.758] Amusement park?
+*C3 P5122->P5197 [136.416-136.697] post
+*C4 P5122->P5197 [137.357-137.997] amusement parks.
+*C5 P5197->P5122 [138.019-138.479] For sure.
+*C6 P5122->P5197 [138.077-138.578] Exactly.
+*C7 P5122->P5197 [139.798-143.980] I definitely would take even six flags over Universal Studios just based on
+ C8 P5122->P5197 [144.820-145.581] the type of roller
+
+=== B12 V03_S1894_I00000006 ongoing_entry core=[214.032, 219.032] ===
+[189.583-191.584] P4064: Yeah, Zephyr, yo, shout out.
+[190.190-192.833] P5215: I just have to mention Zephyr. Yeah, you...
+[192.364-193.765] P4064: Yo, Meta, shout out Zephyr.
+[194.440-196.361] P5215: Yeah, you know exactly who I'm talking about.
+[196.466-196.786] P4064: Yeah.
+[196.721-207.408] P5215: He's a person that I had to get a little more controlling with because, God, insulting the devs in your bug, man, not cool, dude.
+[199.428-206.909] P4064: Yeah. Oh, boy. Game fucking sucks.
+[208.408-212.511] P5215: Or the placeholder image that seemed insensitive.
+[213.031-214.932] P4064: Oh my god. I forgot about that.
+[214.832-216.193] P5215: I was like, dude?
+[215.832-218.393] P4064: Oh my god. We can't talk about that. That's a hot button issue.
+[217.674-221.136] P5215: No, it is a hot button issue, but I was like, dude?
+[218.433-218.733] P4064: Yeah. Yeah.
+[221.996-224.170] P5215: It's a placeholder. Chill.
+[224.576-224.836] P4064: Yeah.
+[225.251-231.633] P5215: It means nothing. It's a placeholder. It'll go away in time. You just have to let it have time.
+[232.059-232.279] P4064: Yeah.
+CANDIDATES (asterisk = scored core)
+ C1 P5215->P4064 [210.910-212.511] that seemed insensitive.
+ C2 P4064->P5215 [213.031-213.711] Oh my god.
+ C3 P4064->P5215 [213.771-214.932] I forgot about that.
+*C4 P5215->P4064 [214.832-216.193] I was like, dude?
+*C5 P4064->P5215 [215.832-216.513] Oh my god.
+*C6 P4064->P5215 [216.573-217.413] We can't talk about that.
+*C7 P4064->P5215 [217.433-218.393] That's a hot button issue.
+*C8 P5215->P4064 [217.674-217.854] No,
+*C9 P4064->P5215 [218.433-218.633] Yeah.
+*C10 P5215->P4064 [218.474-221.136] it is a hot button issue, but I was like, dude?
+*C11 P4064->P5215 [218.653-218.733] Yeah.
+ C12 P5215->P4064 [221.996-222.877] It's a placeholder.
+ C13 P5215->P4064 [223.730-224.170] Chill.
+
+=== B13 V00_S1384_I00000682 ongoing_entry core=[176.796, 181.796] ===
+[154.488-162.068] P0124A: And we listened to music and we all got the house cleaned. And it was just kind of like a Not even a day, because everybody just took their parts.
+[158.128-159.208] P0359A: So you make like a day out of it?
+[162.148-168.851] P0124A: And because we all knew we cleaned, we cleaned up behind ourselves throughout the week. So it wasn't always so much to do on Saturday, but really like mop.
+[168.812-169.733] P0359A: Are we not doing that now?
+[168.951-171.012] P0124A: And we're not, babe.
+[169.753-170.393] P0359A: Is that what you're saying?
+[171.072-177.835] P0124A: And I just, for me, it feels like I go into the week and my brain is already cluttered.
+[177.596-179.857] P0359A: Thinking about cleaning already? That's on your brain, huh?
+[179.918-191.067] P0124A: No, not even cleaning, it's just that I'm at work, and my environment in my home is not, it's confusing, so it creates that same type of energy when I'm trying to go throughout my week.
+[190.396-191.898] P0359A: Oh, I don't want that for you.
+[192.389-195.711] P0124A: So I'm just, yeah, I don't want you to feel bad, sweetheart, I'm just, but...
+[192.438-202.488] P0359A: I feel bad. I do. I do, but I still, I got to eat something before we do anything. I really got to eat. I'm hungry.
+[202.537-205.720] P0124A: Okay, well then go in there and toast you a toaster strudel.
+[206.411-207.392] P0359A: I like those. Those are good.
+[207.076-213.941] P0124A: And then let's just please just knock this out and we can go. We can do all of that.
+CANDIDATES (asterisk = scored core)
+ C1 P0124A->P0359A [174.353-177.835] it feels like I go into the week and my brain is already cluttered.
+*C2 P0359A->P0124A [177.596-178.636] Thinking about cleaning already?
+*C3 P0359A->P0124A [178.897-179.857] That's on your brain, huh?
+*C4 P0124A->P0359A [179.918-182.160] No, not even cleaning, it's just that I'm at work,
+ C5 P0124A->P0359A [182.580-182.700] and
+ C6 P0124A->P0359A [184.342-186.343] my environment in my home is not,
+
+=== B14 V00_S1890_I00000111 question_end core=[260.838, 265.838] ===
+[82.545-91.576] P0452: I'm like, the other day I said to somebody, I was like, I don't understand people that have children. Like they have to be sacrificing somewhere or they're up at like a.m.
+[88.326-89.347] P0017: Seriously.
+[91.636-95.137] P0452: because like, do you go to the gym? Are you working eight hours?
+[94.708-187.506] P0017: no that's i don't even know like going back okay so i'm going back to school yeah and this is exactly why they're trying to remove all this working from home because of situations it's a it's amazing i think it's absolutely amazing so i think it's the best thing that they could have done i feel like you know doing the whole thing in my jigger That was the best thing, that was one of the best things besides us surviving, was like really, you know, coming out of, like having to like not work in the comfort of our own home.
+[95.397-179.845] P0452: Do you have, what are you, do you have like, where's your significant other? How does the house get clean? Who is going to the grocery store? Like, I swear to God, I have no children. And every day I'm like scattering to get stuff done. All day, all night, seriously. But yeah, so. And what I was going to say is I think if I was in a classroom environment every single time because the class is two times a week I think if I was in the classroom every single class I would get more done because when I'm in the house I'm like I'm listening to her but I'm also making breakfast I'm making my lunch before I go to work. I'm putting on my makeup sitting there and I'm listening everything and then she goes okay so for homework I'm like homework like I gotta go to work child I ain't got time for this but if I was sitting in that damn classroom I would be like doing everything sitting there with no distractions but then I wouldn't have the space and time to be like making food and doing that either I know but gosh it was so beneficial I got so much stuff done at one time yeah Yeah, it is. Yeah, true.
+[187.566-189.448] P0017: But the thing is, people get too comfortable.
+[189.617-212.649] P0452: You do. And I get that because I couldn't imagine if I had to work from home. I think about people that work from home that really don't like some of my homegirls that I work with back government. Well, I don't know if people that I know that I've worked with on the East Coast, a lot of them are like, I swear to God, I went home and we was like at the bar. They was like, girl, I take my computer everywhere. How are you at the bar having lunch and food and happy hour?
+[211.891-261.682] P0017: No, I will never. I did that one time. And when I tell you that was like God was really on my side because I wanted to go out for Juneteenth. And I was like, oh, my gosh. And my friend was like, come on, Bray, like you're working from home. Like, just bring your computer. So I was like, OK. So I finish up all my work for the day. And I was like, I'll just bring my computer just in case if I need to, like, touch up a file or something. I went to this bookstore. I don't know what happened, but I left the computer there the whole entire weekend in the bookstore. When I like on Monday, I was home and I was like, where's my computer at? And I was like, oh my goodness, I have to track my steps. Isn't that crazy?
+[261.638-267.082] P0452: They should have fired Joe. Like, that's crazy. No, like, ain't no way.
+[267.748-282.502] P0017: So then on Monday, I called the bookstore and I'm like, hey, did I leave a computer up there? They're like, yes, you did. I took those people a big bouquet of flowers, a fruit basket. It was time to pay homage. I literally was so thankful.
+[283.192-288.000] P0452: Were you drinking?
+CANDIDATES (asterisk = scored core)
+ C1 P0017->P0452 [258.300-258.540] And I
+ C2 P0017->P0452 [259.120-260.881] was like, oh my goodness, I have to track my steps.
+*C3 P0017->P0452 [261.002-261.682] Isn't that crazy?
+*C4 P0452->P0017 [261.638-262.979] They should have fired Joe.
+*C5 P0452->P0017 [263.119-264.160] Like, that's crazy.
+*C6 P0452->P0017 [265.501-265.761] No,
+ C7 P0452->P0017 [266.261-267.082] like, ain't no way.
+ C8 P0017->P0452 [267.748-268.749] So then on Monday, I
+ C9 P0017->P0452 [269.169-270.771] called the bookstore and I'm like, hey, did I leave
+
+=== B15 V00_S0807_I00000515 ongoing_entry core=[26.282, 31.282] ===
+[0.014-7.797] P0944: say about me?
+[2.154-13.756] P0161: You are a very smart dresser. Very smart dresser. You look the part of a very successful real estate agent.
+[13.760-15.881] P0944: Thank you. I appreciate it. My wife dresses me every day.
+[16.297-18.137] P0161: Well, now that figures.
+[19.262-20.702] P0944: No, I get the approval from her every day.
+[23.718-27.999] P0161: Well, you know, that's good. As long as she doesn't lay out your clothes. Okay.
+[27.082-28.603] P0944: No, she doesn't go that far.
+[28.759-29.280] P0161: Okay.
+[29.123-31.024] P0944: She just gives me the thumbs up or thumbs down.
+[31.060-35.658] P0161: Okay. Okay, you give me a compliment now.
+[39.108-46.111] P0944: You're a good friend, very loyal, honest, and I know I could always depend on you, man.
+[46.484-47.985] P0161: Thank you, that's a good compliment.
+[51.513-55.475] P0944: They say if you have one friend like that, you have many, but I'm very lucky.
+[54.108-69.403] P0161: Absolutely right, absolutely right. Okay, we did good with that question. Okay.
+[63.380-64.461] P0944: Okay, sorry about that.
+[69.843-71.564] P0161: Do you ever compliment strangers?
+CANDIDATES (asterisk = scored core)
+ C1 P0161->P0944 [23.718-25.399] Well, you know, that's good.
+ C2 P0161->P0944 [25.459-27.059] As long as she doesn't lay out your clothes.
+*C3 P0161->P0944 [27.079-27.999] Okay.
+*C4 P0944->P0161 [27.082-27.262] No,
+*C5 P0944->P0161 [27.722-28.603] she doesn't go that far.
+*C6 P0161->P0944 [28.759-29.280] Okay.
+*C7 P0944->P0161 [29.123-31.024] She just gives me the thumbs up or thumbs down.
+*C8 P0161->P0944 [31.060-31.300] Okay.
+ C9 P0161->P0944 [33.177-33.517] Okay,
+ C10 P0161->P0944 [34.258-35.658] you give me a compliment now.
+
+=== B16 V03_S0111_I00000307 ongoing_entry core=[52.408, 57.408] ===
+[0.000-9.058] P1031: right now, you think, all right, I might want to change some things in the past, and then take the opportunity to change some things for good, I guess.
+[4.287-27.980] P1246: Yeah, yeah. Yeah, because I don't know how much good talking to myself in the future would be. Because I feel like I can already kind of do that. You can reflect on things that have happened in the past and think about instances.
+[25.208-36.716] P1031: I think it wouldn't really make any sense to like talk into the future.
+[28.321-33.205] P1246: And that almost is a message from the past already. Yeah.
+[36.956-40.098] P1031: I'm like, you don't know what's happened already, so.
+[39.765-43.446] P1246: Unless they could respond back, like yourself, because that could be kind of cool.
+[42.539-44.621] P1031: Right. That's it.
+[44.666-52.508] P1246: But speaking to the past, speaking, if I speak to the past, that past person is getting a message from the future.
+[53.066-53.907] P1031: Exactly, yeah.
+[53.208-54.909] P1246: So I think that's kind of cool.
+[55.388-55.988] P1031: That's pretty cool.
+[55.929-59.230] P1246: Yeah, because then you could, yeah, I just thought of it.
+[56.869-59.850] P1031: I never thought it would be like that. Yeah.
+[59.290-70.070] P1246: I've done this a bunch and I just thought about it like that. So I think, yeah, that would be a cool, that would be pretty handy sometimes to be able to, Yeah.
+[68.034-88.601] P1031: Yeah, that's a pretty good point, man. I've heard a lot of people talk about the future, right? But then they would say, I don't want to change the past. It's the past, right? I want to maybe change the future. But then if you want to really change the future, you do what you're doing, right?
+[88.996-89.276] P1246: Yeah.
+[89.162-92.844] P1031: You change the past to alter your future.
+[90.737-111.085] P1246: Yeah. Yeah, if you're doing something one way the entire time, and then you change it, it'll affect the future. And so when you look back on that, you say, I changed the future, which is my present now, through just kind of manipulating my present then. So I guess.
+[110.856-124.691] P1031: Well, I guess I'll say the only thing I would do for the future would be like just reminders, right? Don't do this or this because it happened here in the past.
+[123.940-152.245] P1246: yeah or like don't get on that car don't get in that car like if you were if you knew you got into a big accident or a big fight or something just hey avoid that yeah yeah Yeah.
+[127.994-155.141] P1031: Right, right. Oh, you know, like what I was thinking, those movies, Final Destination, where they keep dying, but the guy keeps seeing them die, right? So I think it was like leaving messages or telling people not to go here, not to do this, for the sake of the future, right?
+CANDIDATES (asterisk = scored core)
+*C1 P1031->P1246 [53.066-53.907] Exactly, yeah.
+*C2 P1246->P1031 [53.208-54.909] So I think that's kind of cool.
+*C3 P1031->P1246 [55.388-55.988] That's pretty cool.
+*C4 P1246->P1031 [55.929-56.709] Yeah, because then you could,
+*C5 P1031->P1246 [56.869-57.929] I never thought it would be like that.
+ C6 P1031->P1246 [57.949-59.850] Yeah.
+ C7 P1246->P1031 [58.069-59.230] yeah, I just thought of it.
+ C8 P1246->P1031 [59.290-61.190] I've done this a bunch and I just thought about it like that.
+ C9 P1246->P1031 [61.690-62.210] So I think,
+
+=== B17 V00_S1269_I00000677 question_end core=[111.91, 116.91] ===
+[82.833-84.294] P0185A: Oh, wow. I'm sorry, man.
+[83.740-87.221] P0210A: So I don't understand why I have to.
+[84.334-84.854] P0185A: I'm sorry.
+[87.941-90.982] P0210A: Joe, I like you. You're a genuinely nice guy.
+[91.037-92.077] P0185A: Thank you. I like you, too.
+[92.183-96.084] P0210A: And believe it or not, I think you're pretty freaking good. The music is great.
+[96.259-97.600] P0185A: Thank you. Well, you can come...
+[97.325-113.490] P0210A: It's just too loud, too late. So please, I'm begging you. The other neighbors complained too. They elected me because of relations that we have. They're trying to call the cops. I'm trying to keep the po-po out of this.
+[112.497-115.219] P0185A: Really? Oh, they're trying to call the cops for real?
+[117.310-121.452] P0210A: I wouldn't be sitting here telling you this if I didn't care about you, okay?
+[120.561-127.685] P0185A: Okay, I appreciate that, I appreciate that. Mm-hmm, mm-hmm.
+[123.333-131.896] P0210A: But I need you to have a little bit more consideration for the rest of us. If you want to jam out on a weekend, you know what? Be my freaking guest.
+[132.268-132.528] P0185A: Okay.
+[132.797-136.558] P0210A: But some of us got regular nine to fives, Monday through Friday.
+[136.692-143.335] P0185A: But sometimes the rehearsal, you know, sometimes we have rehearsals throughout the week and I can't do everything on the weekend.
+[143.641-145.282] P0210A: Why can't you do it at somebody else's house?
+[145.797-146.917] P0185A: Because I got all the equipment.
+[148.657-151.258] P0210A: How did the equipment get here? It's been transported, right?
+CANDIDATES (asterisk = scored core)
+ C1 P0210A->P0185A [109.929-111.149] They're trying to call the cops.
+*C2 P0210A->P0185A [112.049-113.490] I'm trying to keep the po-po out of this.
+*C3 P0185A->P0210A [112.497-112.797] Really?
+*C4 P0185A->P0210A [112.817-112.857] Oh,
+*C5 P0185A->P0210A [114.018-115.219] they're trying to call the cops for real?
+ C6 P0210A->P0185A [117.310-119.031] I wouldn't be sitting here telling you this
+ C7 P0210A->P0185A [119.391-120.471] if I didn't care about you,
+ C8 P0185A->P0210A [120.561-122.062] Okay, I appreciate
+ C9 P0210A->P0185A [121.152-121.452] okay?
+
+=== B18 V01_S0079_I00000134 repeated_receipts core=[130.143, 135.143] ===
+[0.000-108.954] P1151: Okay. So... I did learn how to drive a manual car when my brother was sleeping when he was a teenager and my dad was like, hey, it's time to take you out with your brother's car to learn how to drive stick shift. I was like, really? He's going to be mad. He's like, come on, let's go. He's sleeping. So my dad had a stick shift car, but it was his Austin Healey car that he had refurbished. So obviously, I was never going to touch that car. So we go out in this old Chevy Cavalier. It was his first car, super junky. And I learned how to drive stick shift. And I don't think my brother ever learned about it. However, okay, so I did learn then, but I decided to get a stick shift car when I'm an adult and like out, you know, living on my own. And so I forget how the car got to my garage. It was beautiful little Acura, so cute, so sporty. And I couldn't take it out because I forgot how to drive stick shift because I had only learned when I was like And then I hadn't practiced again until I was maybe So this beautiful new car, not brand new, but new to me, beautiful car is in my garage and I can't drive it. And of course, now that I paid for it with my money, you know, like I don't want to try to drive it and break it, you know. So I had to wait until my dad would come to my house and take me out to practice and to relearn how to drive a stick shift. So it was just hilarious being an adult. And so he would take it to like the local high school parking lot after hours, of course. And that's where I relearned how to drive a stick shift.
+[110.053-111.154] P1150: That's so cute.
+[110.267-130.163] P1151: But you've got to be careful in Pittsburgh. You don't want to mess around if you don't really know what you're doing because you will approach a hill anywhere you go, a steep hill. And obviously that's the scariest part is being on a steep incline and having to make the shift happen correctly so you don't roll back.
+[125.665-131.918] P1150: Yes. Yes. Yes, you're right.
+[130.943-132.284] P1151: Yes, you're right. Yeah. Oh.
+[133.398-137.901] P1150: Actually, my first brand new car was a stick shift.
+[138.309-138.369] P1151: Oh.
+[139.002-147.527] P1150: I got it home. I don't know how I got it home. However, my dad taught me on the hills.
+[148.139-148.619] P1151: Oh, my.
+[148.745-149.826] P1150: Start off with the hills.
+[149.059-149.299] P1151: Yeah.
+[150.167-152.690] P1150: Oh, so pick the steepest hill in town.
+[151.200-152.281] P1151: Start with the hills.
+[152.750-162.601] P1150: Yeah. It was at nighttime. Not many people were downtown. It was more of a suburb. And yeah, taught me on the hills, which do or die.
+[161.204-161.424] P1151: Wow.
+[162.621-164.403] P1150: And this was my brand new car.
+[162.985-163.265] P1151: Yeah.
+[164.423-167.026] P1150: Yeah, it is scary.
+CANDIDATES (asterisk = scored core)
+ C1 P1150->P1151 [128.527-128.868] Yes.
+ C2 P1151->P1150 [128.581-130.163] you don't roll back.
+*C3 P1150->P1151 [130.897-131.918] Yes, you're right.
+*C4 P1151->P1150 [130.943-131.864] Yes, you're right.
+*C5 P1151->P1150 [131.964-132.224] Yeah.
+*C6 P1151->P1150 [132.244-132.284] Oh.
+*C7 P1150->P1151 [133.398-134.339] Actually, my first
+*C8 P1150->P1151 [134.939-135.700] brand new car
+ C9 P1150->P1151 [136.440-136.700] was
+ C10 P1150->P1151 [137.221-137.901] a stick shift.
+ C11 P1151->P1150 [138.309-138.369] Oh.
+ C12 P1150->P1151 [139.002-139.102] I
+ C13 P1150->P1151 [139.582-139.922] got it
+
+=== B19 V02_S3150_I00000382 question_end core=[154.483, 159.483] ===
+[39.540-49.205] P4085: I think for me, you said four, right? So I think one would be eyes on the road all the time. Seatbelt.
+[47.315-48.676] P4028: Yeah, I was on the road. That's why I don't know.
+[49.325-89.347] P4085: Seatbelt. No texting and driving, like you said. Because I know how it is. When I go to my lessons, I tell myself I wasn't going to use my phone. But here I am, changing the song, replying to a text at a red light. I mean, I'm bad with it sometimes, but sometimes I let it wait. And then I think the fourth one, I think, would be not to trust other drivers. You could think, oh yeah, they're going to stop in time. They're not going to come into my lane really quick. You got to not trust them, because you don't know how people are. They might not see you. You might be in their blind spot.
+[89.993-112.693] P4028: But what do you think is the most important one?
+[92.068-120.981] P4085: People just switch lanes without even putting the turn signal. So I know for sure it happened to me. I had a break really hard. I missed all my breaks on time on the freeway. I was going like No, not I was going like and this one guy in front of me had to brake hard because he switched into my lane. So that was stupid. Eyes on the road. Eyes on the road. If you have eyes on the road, then everything else just kind of falls into place, you know? Because you got to pay attention.
+[120.448-120.628] P4028: True.
+[121.001-121.482] P4085: Uh-huh.
+[121.249-122.149] P4028: Agree, agree.
+[121.502-129.426] P4085: Uh-huh.
+[122.189-137.838] P4028: Like, I was in a ride where I didn't, like, don't text and drive. Because I remember, like, I've, like, hit a car. I've crashed because of, like, I've, like, texted and drive. I was replying to a text of, like, a group chat. And I was, like, I think I was, like, laughing. Like, ha, ha, ha, and shit like that. And then, like, crashed.
+[136.197-153.268] P4085: Yeah. No, yeah, you just gotta, like, look straight, and because, like, you're driving something that goes fast, and, like, you could kill someone, you know?
+[137.858-146.063] P4028: You know what I mean? So I think it's, like, you always have to have your eyes on the road. Don't ever, like, leave your eyes off that steering wheel. Your eyes on that windshield.
+[153.308-155.409] P4085: Like, you're someone, someone's life is in your hands, you know?
+[155.283-159.667] P4028: Someone's asking, exactly. Don't try to put on people's lives, man.
+[157.250-163.814] P4085: So, no, yeah, like, and then driving drunk, that's just stupid, bro.
+[159.707-164.210] P4028: It's messed up, bro. Huh?
+[164.495-165.015] P4085: Driving drunk?
+[165.611-166.732] P4028: Exactly. Don't get stupid, man.
+[167.280-177.188] P4085: Like, driving a car, like, if you can't trust yourself, if you can't trust other people, and you can't trust yourself because you're drunk, you're making it worse for everyone, bro.
+[177.340-177.861] P4028: That's bro.
+[180.470-193.482] P4085: So, yeah, bro, like, too many sad stories out there. People not putting their seatbelt on, just not focusing, not yielding, you know, because, like, For real.
+[191.381-194.648] P4028: Not yielding, exactly. That's one of the big ones.
+[194.202-199.368] P4085: I'm going too fast. Too many young lives out here are being lost because kids are going too fast.
+[200.360-201.202] P4028: Exactly, exactly.
+CANDIDATES (asterisk = scored core)
+ C1 P4085->P4028 [153.308-155.409] Like, you're someone, someone's life is in your hands, you know?
+*C2 P4028->P4085 [155.283-156.404] Someone's asking, exactly.
+*C3 P4028->P4085 [157.085-159.667] Don't try to put on people's lives, man.
+*C4 P4085->P4028 [157.250-157.670] So,
+ C5 P4028->P4085 [159.707-159.807] It's
+ C6 P4085->P4028 [160.572-161.273] no, yeah, like,
+ C7 P4028->P4085 [161.148-161.928] messed up, bro.
+ C8 P4085->P4028 [162.053-163.814] and then driving drunk, that's just stupid, bro.
+ C9 P4028->P4085 [163.990-164.210] Huh?
+
+=== B20 V00_S0654_I00000128 repeated_receipts core=[95.945, 100.945] ===
+[0.762-26.487] P0805: Najwa, you know, I've been thinking, I know we talk a lot to each other and we share things. But looking at your life, but mostly looking at the future of your life, at the unlimited possibilities in your life and for you, what are your deepest desires for your growth, for yourself and your future.
+[12.746-38.020] P0806: yes yes ah You know, I have a project, a humanitarian project that I am so passionate about.
+[27.187-31.408] P0805: And this is where you see yourself as a full-blown rose that is opened.
+[39.040-57.747] P0806: And with this humanitarian project, I do wish to have it globally, a statue of mother of humanity. That's what I've named her. She is gorgeous. She holds a feather, her boob is out because she supples, or excuse me, Yes, yes.
+[56.632-57.576] P0805: Yes, yes, yes.
+[58.468-91.163] P0806: Mother, because that's what mothers are. She's compassionate, she's empathetic, she's loving. In the world, we all need love. So going back to my humanitarian project, I wish to have artifacts from all over the world, just in one place. You know how we have museums and they're like, oh, this is ours. No, no, it should be for everyone to enjoy globally in one place if they desire. Why do I have to go here to see, you know, Mona Lisa?
+[90.178-139.835] P0805: and being and being in that theme what items would you put into your museum well i know the statue but is there a theme since it's global and the statue is about mother and nature going to each country and understanding in that culture what does it mean to them what symbols do they look at that gives them that same feeling of your statue Well, then you could do a mobile museum.
+[92.884-142.620] P0806: Yeah. Oh, yeah. So, like I said, globally. So... Okay, so I would like artifacts, portraits, paintings, and if I could have some livestock, I would include that too, just to touch on every aspect of the country. And like I said, I would love for Mother of Humanity to be spread throughout the country, so maybe five countries. And you know, we could, a mobile museum, you know?
+[142.456-151.839] P0805: Taking specific pieces, highlighting those specific pieces, and then also, you know, you're online, so they can actually go through your museum and look at these things.
+[142.640-153.254] P0806: Yeah. Do it virtually.
+[153.160-153.440] P0805: Yes.
+[153.494-159.081] P0806: And now that we have so many cool headsets that puts us there, right? I wear VR.
+[158.721-160.322] P0805: Absolutely, absolutely.
+[159.121-159.522] P0806: So yeah.
+[161.572-177.883] P0805: And, you know, I think I could help you doing the actual mobile exhibits, going to the different countries and just do the pre-staking about what locations you should select and giving up the energy and the hype before the actual exhibit, like a before and then an after.
+[178.078-180.620] P0806: Can you share some ideas with me about that?
+[181.386-184.548] P0805: Well, for me, it's all about hands-on.
+CANDIDATES (asterisk = scored core)
+ C1 P0806->P0805 [92.884-93.144] Yeah.
+ C2 P0805->P0806 [93.061-95.263] what items would you put into your
+*C3 P0805->P0806 [96.384-96.884] museum
+*C4 P0806->P0805 [96.745-97.646] Oh, yeah.
+*C5 P0806->P0805 [98.306-98.566] So,
+*C6 P0806->P0805 [98.946-100.127] like I said, globally.
+*C7 P0805->P0806 [99.827-100.968] well i know the statue
+ C8 P0805->P0806 [101.509-105.753] but is there a theme since it's global and the statue is about mother and nature
+ C9 P0806->P0805 [101.607-101.927] So...
+
+=== B21 V00_S0055_I00000138 repeated_receipts core=[66.776, 71.776] ===
+[33.146-37.228] P0085: Yes, yes, that melanin, black girl, magic queen, okay?
+[35.804-38.065] P0029A: Period, black girl magic, period.
+[38.209-39.609] P0085: All day long, yeah.
+[39.120-40.483] P0029A: Oh, you're so sweet.
+[40.210-41.030] P0085: You're welcome.
+[40.643-42.987] P0029A: Oh, beautiful, recognized, beautiful girl.
+[44.151-59.008] P0085: Wait, what'd you say? I'm sorry. So is this a style that you've always had, or is it something that you've worked Oh, my God.
+[52.927-64.032] P0029A: Well, I've lost weight since May I've lost over pounds. So these are honestly, thank God baggy clothes are in, because these used to fit tight.
+[59.689-65.114] P0085: Wow, congratulations. Oh, wow.
+[64.393-70.315] P0029A: Actually, when I was bigger, these were my skin tight. I'm about to show off my figure pants, and now they're super big.
+[67.576-69.317] P0085: Yeah. Yeah.
+[70.335-72.897] P0029A: But I'm like, the kids are wearing big clothes.
+[72.880-73.941] P0085: Oh, that's the thing now.
+[73.537-80.700] P0029A: So, yeah, these clothes are from when I was, like, over pounds, and I need to get rid of them because I just, you know, I love clothes, so I hold on to them.
+[74.041-80.207] P0085: Yeah. Oh, wow. Yeah.
+[80.800-87.844] P0029A: I should be donating them to somebody, but I'm like the kids wearing bigger clothes now, so I just threw it together.
+[82.249-87.985] P0085: No, but it works. So yeah, it definitely works. Congratulations.
+[87.904-88.884] P0029A: Thank you.
+[88.005-89.306] P0085: That's amazing.
+[89.365-90.145] P0029A: Thank you.
+[89.846-91.248] P0085: That is amazing.
+[90.505-92.566] P0029A: Oh, you're making me blush.
+[91.428-94.551] P0085: Yeah, you just look. Yeah, you you're rocking it.
+[94.587-95.247] P0029A: Oh, but I like your style.
+[94.791-95.211] P0085: I love it.
+[95.287-100.790] P0029A: I was looking at your pins earlier because I have a jean jacket, and I don't put pins on it, but I think that's a way to style it up.
+CANDIDATES (asterisk = scored core)
+ C1 P0085->P0029A [63.852-65.114] Oh, wow.
+ C2 P0029A->P0085 [64.393-66.694] Actually, when I was bigger, these were my skin tight.
+ C3 P0029A->P0085 [66.754-70.315] I'm about to show off my figure pants, and now they're super big.
+*C4 P0085->P0029A [67.576-67.956] Yeah.
+*C5 P0085->P0029A [68.477-69.317] Yeah.
+*C6 P0029A->P0085 [70.335-72.897] But I'm like, the kids are wearing big clothes.
+ C7 P0085->P0029A [72.880-73.941] Oh, that's the thing now.
+ C8 P0029A->P0085 [73.537-76.999] So, yeah, these clothes are from when I was, like, over pounds, and
+ C9 P0085->P0029A [74.041-74.382] Yeah.
+ C10 P0085->P0029A [76.464-76.604] Oh,
+
+=== B22 V03_S1899_I00000337 repeated_receipts core=[112.574, 117.574] ===
+[45.375-64.392] P5141: Or... enjoy it for a little bit, just probably roll myself in the money. It's like, wow, this is it. I always dreamed of having this much money and then probably just report it. So I think...
+[61.136-70.423] P1503: So do you feel like you're obligated to try to find the owner of that money or because it fell out of a truck, do you not worry about it?
+[73.560-83.222] P5141: Essentially, I am not obligated, but I think with my subconsciousness, I do make it seem like I am obligated because it's just like that guilt trip.
+[81.512-81.672] P1503: Right.
+[83.242-95.265] P5141: Like, you know, this is not right. Or maybe it's like either this is not right. I just basically stole money or, hey, the universe brought this to me because the universe knew I needed money.
+[94.564-97.065] P1503: That's why it's a tricky moral dilemma.
+[96.665-98.406] P5141: Exactly. Yeah.
+[98.066-101.948] P1503: So you didn't do anything to make it come to you.
+[99.006-104.899] P5141: Yeah. Yeah.
+[102.208-111.533] P1503: It just landed on your car. You didn't do anything inappropriate. But would you feel that there had to be steps you should take before you kept the money?
+[113.361-121.364] P5141: Research, if there's been any reports, and if there's anything like a search for a truck.
+[113.374-125.730] P1503: Yes, sir. Yes, sir. Would you be paranoid about the number of cars with cameras that may have been driving around you?
+[125.456-127.117] P5141: They didn't even think that far.
+[126.751-128.692] P1503: That's what just popped into my mind.
+[128.678-136.583] P5141: Yeah. Oh my God, absolutely I would. Oh, that's true. Nowadays there's freaking cameras everywhere. Wow, yeah.
+[136.337-146.944] P1503: So let's just say you probably would make some attempt to figure out who it is, and if all else failed, well then, you'd have to suffer with the money.
+[136.623-139.945] P5141: Yeah. Yeah. Let's hope for that.
+[147.945-164.315] P1503: Excellent. Yeah, I'm with you. Discuss a recent news article or current event that you think has significant implications but doesn't directly affect you or your partner.
+CANDIDATES (asterisk = scored core)
+ C1 P1503->P5141 [109.992-111.533] before you kept the money?
+*C2 P5141->P1503 [113.361-113.842] Research,
+*C3 P1503->P5141 [113.374-113.694] Yes, sir.
+*C4 P1503->P5141 [113.714-113.774] Yes,
+*C5 P5141->P1503 [114.222-115.502] if there's been any reports,
+*C6 P5141->P1503 [116.222-117.983] and if there's anything like
+ C7 P5141->P1503 [119.523-120.023] a search
+ C8 P1503->P5141 [119.677-119.837] sir.
+ C9 P5141->P1503 [120.464-120.684] for a
+ C10 P1503->P5141 [120.467-122.448] Would you be paranoid about the number of
+ C11 P5141->P1503 [121.044-121.364] truck.
+
+=== B23 V03_S0337_I00000065 question_end core=[139.87, 144.87] ===
+[0.000-24.953] P1900: were at a local Burger King actually. That's like, it was in the center of town. So we would all kind of congregate there. A lot of people would come through there. So we show up and then out of nowhere, these older kids drive past, probably like, let's say they were like and I was at the time or something. But anyway, so they drive past and they yell something at us.
+[23.902-26.285] P1901: That's awesome.
+[25.073-56.000] P1900: I'm with like three other friends. They don't, we didn't, none of us said anything. They yelled something at us. And then all of a sudden the car stops and one of them gets out and runs up to me and starts saying like, I called him a name, which I did not. None of us said anything. And I just tried to say like, I was like, no, dude, but this kid was also a notorious like troublemaker, a fighter. So I just didn't want to start any trouble with him or anything. So I was like, no, I didn't say it. I didn't say it. And then out of nowhere, the kid slaps me in the face.
+[53.618-54.839] P1901: Turned away.
+[56.820-83.795] P1900: And it was sort of one of these moments of, like, you know, no one likes to get slapped, so you're like, what do I do? How do I handle this? Like I said, he had a reputation for being a fighter. I didn't really want to fight. So to avoid the conflict, I just backed up and sort of turned away from him. And then I think his friend realized, too, that it could have escalated quickly because I was with, like, three of my friends. We had skateboards. There was only two of them. And so, yeah, it was...
+[83.808-88.050] P1901: Okay.
+[85.936-92.782] P1900: I backed up just because I didn't want to fight. I didn't want the conflict. And his friend came and took him and was like, no, I was lying.
+[92.172-92.292] P1901: Oh.
+[92.862-137.268] P1900: Nobody yelled anything. He admitted to instigating the whole interaction. And then they sort of laughed it off and just left. And then my friends were like, oh. They kind of made fun of me for not fighting after getting slapped. But ultimately, it probably would have turned into a much more you know, violent and brutal situation. And I'm super happy I avoided that conflict in the long run, especially like at the time when you're younger, you're like, oh, I should have been tougher. I should have acted harder, so to speak, especially in front of your friends or that kind of thing. But as I've gotten older, those are one of the, it's, that decision, I think, is something I'm proud of now that I'm older.
+[138.327-142.291] P1901: So you wouldn't have done things differently if you could in hindsight?
+[138.348-159.706] P1900: So you watch your topics differently? Yeah. No, no. In hindsight, I think it's better to put logic before your ego. And in that moment, it was really only my ego trying to be like, oh, you should fight back. So I guess you could say I let my higher mind win, you know.
+[161.639-162.900] P1901: I respect that decision.
+[163.289-164.009] P1900: Thank you. Yeah.
+[164.681-166.663] P1901: I could see myself doing the same thing.
+[166.932-167.092] P1900: Yeah.
+[167.283-168.924] P1901: Because I'm a lover, not a fighter.
+[169.107-170.168] P1900: Right, right.
+[169.465-170.746] P1901: I don't even know how to fight.
+[170.188-172.229] P1900: You're a grower instead of a destroyer, right?
+[172.127-173.508] P1901: Right, exactly.
+[172.369-172.949] P1900: Yeah, yeah.
+[173.528-177.831] P1901: Excuse me.
+[173.529-193.560] P1900: Yeah. Yes, we'll pause there. So if you could please pick up your scripts again and read prompt three. Okay. So participant A, you are going to be the initiator for this one again.
+CANDIDATES (asterisk = scored core)
+ C1 P1900->P1901 [135.848-136.168] now
+ C2 P1900->P1901 [136.728-137.268] that I'm older.
+ C3 P1901->P1900 [138.327-139.889] So you wouldn't have done things differently
+ C4 P1900->P1901 [138.348-140.829] So you watch your topics differently?
+*C5 P1901->P1900 [140.670-142.291] if you could in hindsight?
+*C6 P1900->P1901 [140.849-140.929] Yeah.
+*C7 P1900->P1901 [142.532-142.792] No,
+*C8 P1900->P1901 [143.193-143.393] no.
+*C9 P1900->P1901 [143.413-143.993] In hindsight,
+ C10 P1900->P1901 [145.895-149.338] I think it's better to put logic before your ego.
+ C11 P1900->P1901 [149.398-149.518] And
+
+=== B24 V01_S0097_I00000313 repeated_receipts core=[23.928, 28.928] ===
+[0.000-26.405] P1275: I were to give advice to my younger self, I think I would tell her that it's going to be okay if you are just a kid. And if I did that earlier, I would have saved a lot of money in therapy. And younger me needs to go to therapy.
+[19.826-25.808] P1002: That person needs to go to therapy, too? Oh, younger you. Okay.
+[27.065-63.130] P1275: But if younger me had gone to therapy and been told that they could be a child, current me would be in a much better place. So that's what I would tell them because I don't think younger me got the permission to do that a lot. And actually, because of that, finds it really hard in some instances, to relate to other people now because our childhoods were so completely different. So getting to be there for my younger self and tell them that the world's not going to fall apart if you don't have it all together at eight years old, it's going to be fine.
+[62.935-63.195] P1002: Mind.
+[63.150-71.920] P1275: There are plenty of adults in your life who might not seem like they have it together, but that's not your problem. And you're OK. And just enjoy being a kid.
+CANDIDATES (asterisk = scored core)
+ C1 P1002->P1275 [19.826-21.307] That person needs to go to therapy, too?
+ C2 P1275->P1002 [22.943-26.405] younger me needs to go to therapy.
+*C3 P1002->P1275 [24.728-25.408] Oh, younger you.
+*C4 P1002->P1275 [25.488-25.808] Okay.
+*C5 P1275->P1002 [27.065-30.427] But if younger me had gone to therapy and been told that they could be a child,
+ C6 P1275->P1002 [31.167-32.948] current me would be in a much better place.
+ C7 P1275->P1002 [32.968-33.708] So that's
+
+=== B25 V01_S1830_I00000635 repeated_receipts core=[175.684, 180.684] ===
+[141.781-146.023] P1934: So do you remember Jimmy's nighttime routine?
+[142.397-142.958] P2689: That's all good.
+[146.043-155.709] P1934: Because you're going to be staying with him. The guest room is all ready for you. Thank you so much for staying. It just makes it easier for you to stay with Jimmy all week while we go to, yeah?
+[155.713-158.034] P2689: Yes, yes, I told you, it's totally fine.
+[155.789-158.490] P1934: Okay. Okay.
+[158.555-160.175] P2689: I know his night routine.
+[160.552-160.892] P1934: Okay.
+[160.976-163.918] P2689: I'm not going to lie to you. I'm the grandma.
+[164.311-170.323] P1934: I know, mom, but we really can't have Jimmy eating candy right before bed.
+[164.638-172.062] P2689: The grandma spoils the granted. Okay.
+[174.592-176.533] P1934: Are you winking at me? Seriously?
+[175.964-177.445] P2689: Yes, yes, yes.
+[176.793-187.438] P1934: No, we need Jimmy to not eat candy because he has this idea that he can eat candy before bed when we come back from vacation, and I don't want to deal with that.
+[187.735-188.556] P2689: Okay, okay.
+[187.919-193.801] P1934: We have a strict nighttime routine, and I expect you to stick with it, please. It'll just make our lives easier.
+[192.439-200.227] P2689: Okay, I know I feed him, I gave him a bath, I bring all the toys in the bathtub for him to play a little bit.
+[193.821-197.663] P1934: Okay, okay.
+[200.807-203.109] P2689: Then we read a book.
+[203.820-204.240] P1934: Right.
+[204.490-209.195] P2689: I give him a five minutes maybe if he wants to watch any cartoon.
+[208.464-211.646] P1934: No, no, mom. Mom. No
+[211.517-211.800] P2689: It's so
+CANDIDATES (asterisk = scored core)
+ C1 P2689->P1934 [171.642-172.062] Okay.
+ C2 P1934->P2689 [174.592-175.713] Are you winking at me?
+*C3 P1934->P2689 [175.913-176.533] Seriously?
+*C4 P2689->P1934 [175.964-177.445] Yes, yes, yes.
+*C5 P1934->P2689 [176.793-179.274] No, we need Jimmy to not eat candy
+*C6 P1934->P2689 [179.955-180.355] because
+ C7 P1934->P2689 [181.616-184.377] he has this idea that he can eat candy before
+ C8 P1934->P2689 [184.777-185.477] bed when we come
+
+=== B26 V03_S0289_I00000484 repeated_receipts core=[87.798, 92.798] ===
+[0.000-3.963] P1648: isn't really necessarily like a fun story, but is the time I set up for myself.
+[1.506-7.509] P1501: Very cool. But I see here.
+[5.485-10.950] P1648: Um, my senior college, I did a, uh, what's called like a capstone project.
+[7.709-11.751] P1501: Yeah.
+[12.672-26.183] P1648: Um, And I guess without being getting too into detail, it was, uh, like we had to come out with like a pretty, um, comprehensive, like marketing strategy for a product.
+[14.412-28.778] P1501: And I guess what I'm being gay, I have.
+[28.443-59.997] P1648: Um, and I think there were our classes about I think people. And out of the of us, I think eight of us or so presented our final projects. We're part of the presentation to the company that we were doing the project for.
+[56.993-59.595] P1501: I'll probably.
+[60.017-94.581] P1648: And I So about probably two or three months into the project, so only one or so months left, so pretty late into it, one of the people or a couple of people in our class or our group were saying whatever the stuff I was researching wasn't really relevant to the project, which really pissed me off because it was.
+[88.598-90.319] P1501: yeah. Like. So. yeah.
+[96.104-176.220] P1648: but it was just like, you know, just kind of unnecessary drama. So myself, and then with the help of a few of my friends in the class, you know, kind of just stood up for myself and made the point in one of our, cause we had like, towards the end of the semester, we were having like three or four times a week, like meetings as a group. of just like showing like hey this is very important to what we need for the outcome of this project um and you know at the end of the day i think that project just got super it got very political when i didn't need to like just with like the kind of like who was managing which portion of the project and like you know all the different parts like who presented what and then like yeah it just got very you know unnecessarily um you know kind of political like that so um you know i i looked for the help of a couple of my classmates whom i was closer with um and you know made the case and then you know made a compelling enough case like look i'm gonna keep doing this and then present it.
+[144.913-185.585] P1501: yeah all right management yeah yeah uh That's a very interesting one.
+[176.281-191.089] P1648: And then, you know, the, the people who presented to loved it. So fuck them for not wanting to include it. Um, but yeah, I think so. That was probably a time where I stood up for myself and I wish I could give more details, but I signed NDA.
+[185.605-187.906] P1501: Very intriguing.
+[191.290-211.780] P1648: So I, uh, I can't really, can't really disclose much more information about who the product was for or, uh, what it was about or what the research was, but you'll have to trust me on it. Yeah. Yeah. We're going to skip the game
+CANDIDATES (asterisk = scored core)
+ C1 P1648->P1501 [87.059-89.680] were saying whatever the stuff I was researching
+*C2 P1501->P1648 [88.598-88.958] yeah.
+*C3 P1501->P1648 [88.998-89.178] Like.
+*C4 P1501->P1648 [89.218-89.378] So.
+*C5 P1648->P1501 [90.080-91.680] wasn't really relevant to the project,
+*C6 P1501->P1648 [90.099-90.319] yeah.
+ C7 P1648->P1501 [92.941-94.581] which really pissed me off because it was.
+ C8 P1648->P1501 [96.104-97.765] but it was just like, you know,
+
+=== B27 V02_S3470_I00000211 repeated_receipts core=[40.593, 45.593] ===
+[1.647-53.532] P4200: get in a situation where I had to really implement my plans on something one day, like, you know what I'm saying, having to do probably with a house deal or something like that. And I had to try to bowl card a little bit because I really wanted that spot. So I was doing some undercut deals, like, yo, if you do this, I'll take care of the maintenance type stuff, you know what I'm saying? So the lady was really like, really like, okay, okay, okay. But even though the people have more money than me, I was able to provide those hands-on, not free of charge, but for a good amount, I'll take care of these areas. So yeah, I remember a time I had to do that one time, pretty like Bogart, and insert my money real quick, or my hands-on features or whatever.
+[41.393-98.767] P4207: Yeah. Yeah. yeah yeah yeah you got to come through with that because you know sometimes if you just wait in line they say close mouth don't get fed you know what i'm saying and so it's like okay you got to figure out you know what do i need to do it's not always just laid out for you you know what i'm saying it's like so um it's not like all right complete step one cool complete step two cool complete step three cool all right we done like it don't work like that sometimes it's like i gotta figure what is step one who do i even find that from okay let me let me you know what i mean you gotta move around exactly yes absolutely you gotta be able to man that's why i say man you don't gotta give me advice i steal advice I still, you know what I'm saying?
+[61.646-97.238] P4200: Right, right. Oh, boom, boom. Right. Trying to figure it out yourself. It's kind of wild because you just really be like, oh, you got to be quick on your toes, you know. Right. Right. Yeah.
+[98.787-116.852] P4207: You got to tell me nothing that I'm paying attention. You know what I'm saying? And you got to keep your head on a swivel and keep your keep your eyes open because that's where you that's where you get it from. You know what I'm saying? That's where you get it from. And like, you know. Sometimes you got to debo your way through that zone.
+[117.013-117.673] P4200: Yeah, yeah.
+[117.412-119.973] P4207: Sometimes you got to debo your way. Sometimes you got to finesse your way.
+[119.074-120.955] P4200: That's a Philly word, John.
+[121.127-121.828] P4207: Yeah, yeah, yeah.
+[121.175-125.558] P4200: Yeah.
+[121.888-127.292] P4207: I'm from Baltimore, you know what I'm saying? So we right down the block. You from? Oh, yeah, you said you from LA.
+[127.179-130.000] P4200: L.A., but I, yeah, I've been down, I've been over that way before.
+CANDIDATES (asterisk = scored core)
+ C1 P4200->P4207 [38.286-41.127] amount, I'll take care of these areas.
+*C2 P4200->P4207 [41.147-45.149] So yeah, I remember a time I had to do that one time,
+*C3 P4207->P4200 [41.393-41.675] Yeah.
+*C4 P4207->P4200 [43.044-43.306] Yeah.
+ C5 P4200->P4207 [45.729-47.490] pretty like Bogart, and insert my
+ C6 P4200->P4207 [49.910-50.471] money real
+
+=== B28 V00_S1198_I00001137 repeated_receipts core=[16.68, 21.68] ===
+[0.416-1.376] P0388A: I'm all right, how you doing?
+[1.562-5.768] P0196A: Wonderful. Good to see you today. So what project are you working on? How can I help you?
+[6.517-8.598] P0388A: So I got this science project.
+[8.773-9.014] P0196A: Okay.
+[10.338-16.599] P0388A: They want me to learn something about the anatomy of human beings, I guess, yeah.
+[15.871-18.353] P0196A: Oh, okay, yeah. Very interesting subject.
+[17.480-17.740] P0388A: Yeah.
+[18.373-19.133] P0196A: Physiology?
+[19.420-19.620] P0388A: Yeah.
+[19.594-29.240] P0196A: Biology? Absolutely. And are you writing a paper, essay? Are you taking an exam? What in particular do you need help with?
+[26.946-31.751] P0388A: So it's going to be a paper and it's also going to be an exam on it.
+[32.363-33.543] P0196A: Wow, okay.
+[33.252-33.533] P0388A: Yeah.
+[34.244-38.747] P0196A: And are you prepared? Are you ready? At what stage?
+[37.457-37.637] P0388A: No.
+[39.127-40.168] P0196A: What can I help you with?
+[41.201-41.642] P0388A: Everything.
+[42.137-43.659] P0196A: Okay, good, okay.
+[42.663-47.408] P0388A: Yeah. Yeah, I got my books right here.
+[44.059-64.439] P0196A: So do you have any reading material yet? Good, okay. So let's start with, for the paper, a thesis. So if you're studying something in particular about the physical anatomy or life biology in general, is it general or something specific about the physical anatomy?
+[65.352-66.693] P0388A: No, I think it's just general.
+CANDIDATES (asterisk = scored core)
+ C1 P0388A->P0196A [14.499-16.599] human beings, I guess, yeah.
+ C2 P0196A->P0388A [15.871-16.892] Oh, okay, yeah.
+*C3 P0196A->P0388A [17.312-18.353] Very interesting subject.
+*C4 P0388A->P0196A [17.480-17.740] Yeah.
+*C5 P0196A->P0388A [18.373-19.133] Physiology?
+*C6 P0388A->P0196A [19.420-19.620] Yeah.
+*C7 P0196A->P0388A [19.594-20.234] Biology?
+*C8 P0196A->P0388A [20.735-21.415] Absolutely.
+ C9 P0196A->P0388A [22.015-24.737] And are you writing a paper, essay?
+ C10 P0196A->P0388A [24.837-26.158] Are you taking an exam?
+
+=== B29 V00_S1510_I00001203 question_end core=[333.651, 338.651] ===
+[294.275-303.722] P0955A: So that's a really big thing, you know, the seconds, you know, that we're, you know, doing the assignment, and then they get up and they perform.
+[300.879-301.319] P0124A: Yeah.
+[303.762-305.183] P0955A: But essentially, to them, it's like performing.
+[305.282-305.562] P0124A: Right.
+[305.983-312.048] P0955A: They speak, you know, or they read in front of the class, and that's like a really big, like you said, confidence booster.
+[313.194-315.276] P0124A: I used to love reading in front of class when I was little.
+[313.229-315.130] P0955A: But also just, really? Wow.
+[315.376-315.936] P0124A: I loved it.
+[316.031-316.391] P0955A: Wow.
+[316.997-318.258] P0124A: Give me a topic, I will talk.
+[318.612-319.093] P0955A: Really?
+[319.099-319.419] P0124A: Yeah.
+[319.113-334.509] P0955A: Oh, that's really beautiful. That's good to know. I was the complete opposite, ironically. Ironically. What else? My goodness. Yeah, so speaking, the groups. Do you have any questions while I think about whatever?
+[334.150-339.254] P0124A: Do they play any instruments? Do the fifth grade kids get familiar with instruments?
+[339.195-343.363] P0955A: Yes, that's not with me, but yeah, they definitely do.
+[340.976-341.236] P0124A: Okay.
+[343.523-348.712] P0955A: They can choose from clarinet, piano, trumpet, and the violin.
+[343.650-343.930] P0124A: OK.
+[348.732-351.978] P0955A: And the viola and the violin, right?
+[348.874-352.737] P0124A: Oh, awesome. OK. Any flutes?
+[354.915-355.956] P0955A: No, actually, I don't think.
+[355.759-356.300] P0124A: Oh, OK.
+[356.316-358.457] P0955A: Oh wait, we do have the flute and the clarinet. Did I say clarinet?
+[358.141-360.543] P0124A: Yeah, you did say clarinet. I played clarinet and I played piano.
+CANDIDATES (asterisk = scored core)
+ C1 P0955A->P0124A [330.064-332.206] Yeah, so speaking, the groups.
+ C2 P0955A->P0124A [332.327-334.509] Do you have any questions while I think about whatever?
+*C3 P0124A->P0955A [334.150-335.511] Do they play any instruments?
+*C4 P0124A->P0955A [335.591-337.253] Do the fifth grade kids get
+*C5 P0124A->P0955A [337.933-339.254] familiar with instruments?
+ C6 P0955A->P0124A [339.195-340.818] Yes, that's not with me,
+ C7 P0124A->P0955A [340.976-341.236] Okay.
+ C8 P0955A->P0124A [341.439-343.363] but yeah, they definitely do.
+
+=== B30 V00_S0442_I00000578 question_end core=[48.362, 53.362] ===
+[0.000-1.918] P0059A: always wanted to achieve and maybe haven't yet?
+[3.058-26.868] P0580: Mm. Man. You know, I wanna get over, My fear of, I mean, okay, I don't have a fear of heights. I feel like someone with a fear of heights would say that, actually. But I just wanna get over it and just skydive, because I can't go on roller coasters.
+[27.922-28.542] P0059A: What happens?
+[29.650-39.015] P0580: Well, nothing terrible. I'm not someone who passes out or anything, but every time I go to Magic Mountain or something, I can't handle the butterflies. People like the butterflies.
+[38.285-39.605] P0059A: Just like heightened anxiety?
+[39.715-45.999] P0580: It's just too much for me. I'll hold everyone's bags, I'll just kinda stay away, but I just wanna get over it.
+[44.887-49.188] P0059A: What do you think the butterflies are? Did something scare you when you were younger at heights?
+[49.162-66.899] P0580: I don't know, I think it's just anxiety at its most. Honestly, no, it's just, I can't take that much euphoria in my stomach, because that, it's too much, it's like, I'm not gonna throw up or anything, but it's like, it's too uncomfortable. I'm like, I wanna crawl out of my skin.
+[67.097-67.497] P0059A: Yeah.
+[67.379-74.605] P0580: It's less of it, like, I can go to, like, tall buildings and look over, and it's like, oh, it's cool, but going down, oh, yeah, I can't.
+[72.684-73.786] P0059A: But the movement of it.
+[74.865-76.446] P0580: My body's not meant to handle that.
+[75.770-85.254] P0059A: Well listen, I feel like the older I've gotten, the more afraid of heights I've gotten as well, but I highly recommend skydiving, or jumping out of a plane and skydiving.
+[80.290-85.253] P0580: Mm-hmm. Have you done it?
+[85.314-86.555] P0059A: I did it, yeah, I did it.
+CANDIDATES (asterisk = scored core)
+ C1 P0580->P0059A [44.278-44.498] but
+ C2 P0059A->P0580 [44.887-46.107] What do you think the butterflies are?
+ C3 P0580->P0059A [44.999-45.999] I just wanna get over it.
+ C4 P0059A->P0580 [46.127-48.288] Did something scare you when you were younger at
+*C5 P0059A->P0580 [49.008-49.188] heights?
+*C6 P0580->P0059A [49.162-50.382] I
+*C7 P0580->P0059A [50.983-52.104] don't know, I think it's just
+*C8 P0580->P0059A [52.504-53.765] anxiety at its most.
+ C9 P0580->P0059A [55.149-58.272] Honestly, no, it's just, I can't take that much

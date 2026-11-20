@@ -1,0 +1,7 @@
+Decision procedure for the EXACT marked LEFT->RIGHT gap:
+1. Reconstruct FOCUS's contribution before and after the target, including fragments across nearby pauses. A repair (we -> I), delayed predicate, example, purpose, reason, explanation, or dependent phrase continues the same contribution: PAUSE. A full sentence alone does not close it.
+2. Trace what OTHER contributes strictly during the target gap. A brief acknowledgment does not create a new contribution by FOCUS. If OTHER supplies new substantive information and RIGHT responds to that information after FOCUS's prior act has ended, choose TURN_TRANSITION.
+3. Short responses require functional interpretation. Apology followed by acceptance of fault can elaborate one response: PAUSE. A standalone acknowledgment followed by a different request, invitation, question, or independent proposal can be TURN_TRANSITION. Do not label solely from response words.
+4. Same-speaker new acts count as TURN_TRANSITION only when the preceding act has ended and RIGHT launches a distinct purpose, rather than explaining it. Topic continuity alone does not prove PAUSE. A discourse marker alone does not prove TURN_TRANSITION.
+5. Test PAUSE first for an actual completion/elaboration/repair link, then test TURN_TRANSITION for a specific new act or response to new substantive content. State which concrete relationship supports the decision. Gap duration and punctuation are not evidence of closure.
+Output exactly one permitted label. Do not change the operational definition.
